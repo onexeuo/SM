@@ -16,7 +16,14 @@
 }
 
 #wrapper{
-  width: 1920px;
+  width:100%;
+}
+
+section{
+  margin-bottom:176px;
+}
+section h2{
+  font-size:64px;
 }
 
 /* header */
@@ -26,13 +33,16 @@ header{
   position:relative;
 }
 .main1Background{
-  width:1920px;
+  width:100%;
   z-index: -2;
   position:absolute;
-  top:-178px;
+  top:0;
+  height:920px;
+  background: url(img/NCT127BackgroundImage.jpg) no-repeat center/cover;
 }
+
 .main1Mobal{
-  width:1920px;
+  width:100%;
   height:920px;
   background-color: rgba(0,0,0,0.6);
   z-index:-1;
@@ -102,6 +112,7 @@ main{
   z-index: 10;
   position:absolute;
   top:300px;
+  background-color: rgba(0, 0, 0, 0);
 }
 #main1 b{
   font-size:116px;
@@ -134,23 +145,115 @@ main{
 
 /* main2 */
 #main2{
-  background-color: #333;
+  margin-top:176px;
 }
 
 #main2 video{
-  width:1000px;
-  height:auto;
+  height:650px;
   object-fit: cover;
 }
+#main2 h2{
+  margin-left:30px;
+}
+#main2 #main2Text{
+  display: inline-block;
+  margin-left:680px;
+}
+#main2 #main2TextSlider{
+  width:844px;
+  height:340px;
+  border: 2px solid #223055;
+  border-radius:200px;
+  padding:60px 100px;
+  margin-top:30px;
+}
+#main2 #main2TextSlider b{
+  font-size:32px;
+}
+#main2 #main2TextSlider p{
+  font-size:20px;
+  margin-top: 25px;
+}
+#main2 #main2TextSlider #main2Indicator{
+  width:130px;
+  height:4px;
+  margin-right:30px;
+  margin-top:20px;
+  background-color: #c3c3c3;
+}
+#main2 #main2TextSlider #main2Indicator #main2IndiMove{
+  width:33.3%;
+  height:100%;
+  background-color: #333;
+  margin-left:0;
+}
 
-
-
+#main2 #main2Background1{
+  width:100%;
+  height:500px;
+  background: linear-gradient(to right, #FFB7CA, #ffffff);;
+  z-index:-2;
+  position: absolute;
+  left:0;
+  top:1750px;
+}
+#main2 #main2Background2{}
 
 
 /* main3 */
 #main3{
-  background-color: coral;
+  padding:100px 170px ;
 }
-/* main4 */
+#main3 h2{
+  color:#FFB7CA;
 
+}
+#main3 #main3Background{
+  width:100%;
+  height:864px;
+  background: #223055;
+  z-index: -2;
+  position:absolute;
+  left:0;
+  top:2390px;
+}
+#main3 .main3Content{
+  margin-bottom: 210px;
+}
+#main3 .main3Content #main3Svg{
+  width:1150px;
+  height:480px;
+  background-color: antiquewhite;
+  margin:30px auto; 
+}
+#main3 .main3Content #main3Text{
+  display: flex;
+  float: right;
+  border-bottom:2px solid #FFB7CA;
+}
+#main3 .main3Content #main3Text p{
+  font-size:32px;
+  color: #fff;
+}
+#main3 .main3Content #main3Text img{
+  margin-left:340px;
+}
+#main3 .main3Content:nth-child(3),#main3 .main3Content:nth-child(4){
+  display: none;
+}
+
+
+/* main4 */
+#main4{
+  background-color: aquamarine;
+}
+/* main5 */
+#main5{
+  background-color: burlywood;
+}
+
+/* main6 */
+#main6{
+  background-color: rgb(106, 62, 5);
+}
 
