@@ -44,25 +44,32 @@ $(document).ready(function(){
     main4P.append(`KRUCIALIZE는 ARTIST와 KREW가 주체성을 가지고, 음악과 음악으로부터 파생되는 다양한 콘텐츠를 제작하는 SM Entertainment 산하 뮤직 레이블입니다. K-POP의 본질에 새로운 숨을 불어넣어 장르적 스펙트럼을 넓히고, 차별화된 독자적인 콘텐츠를 추구합니다.`);
   });
 
-  let currentIndex = 0;
-  $("#main2TextSliderWrap").append($("slider").first().clone(true));
 
-  setInterval(function(){
-    currentIndex++;
-    $("#main2TextSliderWrap").animate({marginLeft:-650*currentIndex},600);
+    const slides = document.querySelectorAll('.slider');
+    const indicator = document.getElementById('main2Indicator');
+    const indiMove = document.getElementById('main2IndiMove');
+    let currentSlide = 0;
 
-    let indicatorPosition = (currentIndex * 33.3);
-    $("#main2IndiMove").css("left",`${indicatorPosition}`);
-
-    if(currentIndex == 3){
-      setTimeout(function(){
-        $("#main2TextSliderWrap").animate({marginLeft:0},0);
-        $("#main2IndiMove").css("left","0%");
-        currentIndex = 0;
-      },600);
+    // 슬라이드 업데이트 함수
+    function updateSlider() {
+        const slideWidth = slides[0].offsetWidth; // 각 슬라이드의 너비
+        document.getElementById('main2TextSliderWrap').style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        
+        // 인디케이터 위치 업데이트
+        const indicatorWidth = (currentSlide + 1) * 33.3;  
+        indiMove.style.width = `${indicatorWidth}%`;
     }
 
-  }, 4000);
+    // 자동 슬라이드 전환
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+    }, 5000); 
+
+    // 초기화
+    updateSlider();
+
+
 
 
 
