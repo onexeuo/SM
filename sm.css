@@ -2,6 +2,8 @@
 /* 
   pink : #FFB7CA
   navy : #223055
+  아티스트 svg radius 60px
+
 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
@@ -268,7 +270,6 @@ main section > div{
   width:1150px;
   height:480px;
   margin:50px;
-  background-color: antiquewhite;
 }
 #main3 .main3Content #main3Text{
   display: flex;
