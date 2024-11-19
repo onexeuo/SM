@@ -69,8 +69,20 @@ $(document).ready(function(){
     // 초기화
     updateSlider();
 
+// 주가 가격 가져오기
+$.ajax({
+  url:'http://127.0.0.1:3000/get-price',
+  method:'GET',
+  success:function(data){
+    const stockPrice = data.finalPrice;
 
-
+    $('#main6Right b:nth-child(1)').append(`${stockPrice}`);
+  },
+    error:function(error){
+      console.log(error,'cant get price');
+      $('#main6Right b').append('cant get price');
+    }
+})
 
 
 

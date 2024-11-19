@@ -266,6 +266,22 @@ main section > div{
   align-items: center;
 }
 
+#main3 .main3Content .svgMask{
+  stroke-width: 2;
+  transform:scale(1,1);
+  transition:stroke-width 0.3s ease;
+}
+#main3 .main3Content:hover .svgMask{
+  stroke:#FFB7CA;
+  stroke-width: 5;
+  transform: scale(0.999,0.999);
+  transition: stroke-width 0.3s ease, transform 0.3s ease;
+
+}
+
+#main3 .main3Content #main3Svg,#main3 .main3Content #main3Text{
+  cursor: pointer;
+}
 #main3 .main3Content #main3Svg{
   width:1150px;
   height:480px;
@@ -285,7 +301,6 @@ main section > div{
   margin-left:340px;
 }
 #main3 .main3Content:nth-child(2),#main3 .main3Content:nth-child(3){
-  display: none;
 }
 
 
@@ -442,6 +457,10 @@ main section > div{
 #main5 #main5Content:nth-child(odd){
   margin-right: 0;
   flex-direction: row-reverse;
+}
+#main5 #main5Content:nth-child(odd) #main5Text{
+  margin-left:200px;
+  margin-right:auto;
 }
 #main5 #main5Content:nth-child(odd) #main5Text p:nth-child(3){
   text-align: right;
