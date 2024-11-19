@@ -14,14 +14,22 @@ app.use(cors());
 app.use(express.static('public'));
 
 //어제 대비 오른 투데이
-(async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto(targetUrl);
-  const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
-  console.log('today : ', today);
-  await browser.close();
-})();
+// (async () => {
+//   const browser = await puppeteer.launch();
+//   const page = await browser.newPage();
+//   await page.goto(targetUrl);
+
+//   const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
+
+//   const replaceToday = today.replace(/[^\d,+-.]/g, '');
+//   const finalToday = replaceToday.replace(/(\.00)$/, '');
+
+//   console.log('today : ', today);
+//   console.log('replaceToday : ', replaceToday);
+//   console.log('fianlToday : ',finalToday);
+
+//   await browser.close();
+// })();
 
 
 // 주가
@@ -51,13 +59,29 @@ app.get('/get-price', async(req, res) => {
     const finalPrice = replacePrice.replace(/[^\d,]/g, '');
     console.log('finalPrice : ',finalPrice);
 
-    res.json({finalPrice});
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto(targetUrl);
+  
+    const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
+  
+    const replaceToday = today.replace(/[^\d,+-.]/g, '');
+    const finalToday = replaceToday.replace(/(\.00)$/, '');
+  
+    console.log('today : ', today);
+    console.log('replaceToday : ', replaceToday);
+    console.log('fianlToday : ',finalToday);
+    
+    await browser.close();
+
+    res.json({finalToday, finalPrice});
   }catch(error){
     console.log('Error');
     res.status(500).json({error : 'not found data'});
   }
 });
 
+
 app.listen(port, () => {
   console.log('server running');
-})
+});

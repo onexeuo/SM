@@ -75,8 +75,10 @@ $.ajax({
   method:'GET',
   success:function(data){
     const stockPrice = data.finalPrice;
+    const stockToday = data.finalToday;
 
     $('#main6Right b:nth-child(1)').append(`${stockPrice}`);
+    $('#main6Right b:nth-child(2)').append(`${stockToday}`);
   },
     error:function(error){
       console.log(error,'cant get price');
