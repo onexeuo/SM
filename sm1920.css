@@ -21,6 +21,7 @@ img{
 }
 
 #wrapper{
+  width:1920px;
   width:100%;
 }
 
@@ -42,28 +43,11 @@ header{
   height:920px;
   position:relative;
 }
-.main1Background{
-  width:100%;
-  z-index: -2;
-  position:absolute;
-  top:0;
-  height:920px;
-  background: url(img/NCT127BackgroundImage.jpg) no-repeat center/cover;
-}
 
-.main1Mobal{
-  width:100%;
-  height:920px;
-  background-color: rgba(0,0,0,0.6);
-  z-index:-1;
-  position:absolute;
-  top:0;
-}
 header #headerWrapper{
   width:100%;
   height:120px;
   border-bottom:solid 2px #fff;
-
 }
 header h1 {
   width:164px;
@@ -107,7 +91,7 @@ header nav ul li:hover a{
   color: #FFB7CA;
 }
 
-header nav ul li:last-child{
+header nav ul li:first-child{
   display: none;
 }
 
@@ -117,7 +101,7 @@ main section > div{
 }
 
 /* main1 */
-#main1{
+#visual{
   width:1520px;
   z-index: 10;
   position:absolute;
@@ -126,11 +110,14 @@ main section > div{
   transform:translateX(-50%);
   background-color: rgba(0, 0, 0, 0);
 }
-#main1 b{
+#visual b{
   font-size:116px;
   color:#FFB7CA;
 }
-#main1 .main1img1{
+#visual>div b:nth-child(10){
+  display: none;
+}
+#visual .visualimg1{
   display: inline-block;
   width:720px;
   height:120px;
@@ -138,7 +125,7 @@ main section > div{
   background-position:center 25%;
   margin-left:21px;
 }
-#main1 .main1img2{
+#visual .visualimg2{
   display: inline-block;
   width:400px;
   height:120px;
@@ -146,7 +133,7 @@ main section > div{
   background-position:center 18%;
   margin:0 12px 0 14px;
 }
-#main1 .main1img3{
+#visual .visualimg3{
   display: inline-block;
   width:648px;
   height:120px;
@@ -154,34 +141,51 @@ main section > div{
   background-position:center 95%;
   margin:0 11px 0 13px;
 }
+.visualBackground{
+  width:100%;
+  z-index: -2;
+  position:absolute;
+  top:0;
+  height:920px;
+  background: url(img/NCT127BackgroundImage.jpg) no-repeat center/cover;
+}
+
+.visualMobal{
+  width:100%;
+  height:920px;
+  background-color: rgba(0,0,0,0.6);
+  z-index:-1;
+  position:absolute;
+  top:0;
+}
 
 /* main2 intro */
-#main2{
+#intro{
   width:100%;
   padding:50px 0;
   margin-top:176px;
   background:linear-gradient(to right, #FFB7CA, #ffffff) ;
   display: flex;
 }
-#main2 section{
+#intro section{
   position:relative;
 }
 
-#main2 video{
+#intro video{
   height:650px;
   object-fit: cover;
   border:5px solid red;
 }
-#main2 h2{
+#intro h2{
   display: inline-block;
   margin-left:30px;
 }
-#main2 #main2Text{
+#intro #introText{
   overflow:hidden;
   float: right;
   width:844px;
 }
-#main2 #main2TextSlider{
+#intro .introTextSlider{
   width:100%;
   width:844px;
   height:340px;
@@ -191,33 +195,31 @@ main section > div{
   margin-top:30px;
   position:relative;
 }
-#main2 #main2TextSliderWrap{
+#intro #introTextSliderWrap{
   display: flex;
   width:300%;
   transition:transform 1s ease-in-out;
 }
-#main2 #main2TextSliderWrap .slider{
+#intro #introTextSliderWrap .slider{
   padding:60px 100px;
   box-sizing: border-box;
 }
-#main2 #main2TextSlider b{
+#intro .introTextSlider b{
   font-size:32px;
 }
-#main2 #main2TextSlider p{
+#intro .introTextSlider p{
   font-size:20px;
   margin-top: 25px;
 }
 
-
-
-#main2 #main2TextSlider #main2Indicator{
+#intro .introTextSlider #introIndicator{
   width:130px;
   height:4px;
   margin-right:140px;
   margin-top:-30px;
   background-color: #c3c3c3;
 }
-#main2 #main2TextSlider #main2Indicator #main2IndiMove{
+#intro .introTextSlider #introIndicator #introIndiMove{
   width:33.3%;
   height:100%;
   background-color: #333;
@@ -225,7 +227,7 @@ main section > div{
   transition: width 1s ease-in-out;
 }
 
-/* #main2 #main2Background1{
+/* #intro #main2Background1{
   width:100%;
   height:500px;
   background: linear-gradient(to right, #FFB7CA, #ffffff);;
@@ -234,44 +236,54 @@ main section > div{
   left:0;
   top:1750px;
 } */
-#main2 #main2Background2{}
+#intro #introBackground2{}
 
 
 /* main3 */
-#main3{
+#artist{
   width:100%;
   background: #223055;
+  position:relative;
 }
-#main3 h2{
+#artist h2{
   color:#FFB7CA;
   margin-left:0;
 }
-#main3 b{
-  width:1700px;
-  font-size: 230px;
-  z-index: -1;
+#artist b{
+  display: flex;
+  flex: 0 0 auto;
+  font-size: 240px;
+  z-index: 0;
   color: #FFB7CA;
   opacity: 0.3;
+  white-space: nowrap;
+  overflow: hidden;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  animation: moveLeft 18s linear infinite;
 }
 
-#main3 #main3Background{
+#artist #artistBackground{
   padding:100px;
   height:100%;
 }
-#main3 .main3Content{
+#artist .artistContent{
   width:1150px;
   height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
-#main3 .main3Content .svgMask{
+#artist .artistContent .svgMask{
   stroke-width: 2;
   transform:scale(1,1);
   transition:stroke-width 0.3s ease;
 }
-#main3 .main3Content:hover .svgMask{
+#artist .artistContent:hover .svgMask{
   stroke:#FFB7CA;
   stroke-width: 5;
   transform: scale(0.999,0.999);
@@ -279,49 +291,51 @@ main section > div{
 
 }
 
-#main3 .main3Content #main3Svg,#main3 .main3Content #main3Text{
+#artist .artistContent #artistSvg,#artist .artistContent #artistText{
   cursor: pointer;
 }
-#main3 .main3Content #main3Svg{
+#artist .artistContent #artistSvg{
   width:1150px;
   height:480px;
   margin:50px;
 }
-#main3 .main3Content #main3Text{
+#artist .artistContent #artistText{
   display: flex;
   padding-bottom:10px;
   margin-right:0;
   border-bottom:2px solid #FFB7CA;
 }
-#main3 .main3Content #main3Text p{
+#artist .artistContent #artistText p{
   font-size:32px;
   color: #fff;
+  white-space: nowrap;
 }
-#main3 .main3Content #main3Text img{
+#artist .artistContent #artistText img{
   margin-left:340px;
 }
-#main3 .main3Content:nth-child(2),#main3 .main3Content:nth-child(3){
+#artist .artistContent:nth-child(2),#artist .artistContent:nth-child(3){
+  display: none;
 }
 
 
 /* main4 */
-#main4{
+#incompany{
   width:100%;
 }
-#main4 h2{
+#incompany h2{
   width:760px;
   margin-right:0;
 }
-#main4 #main4Content{
+#incompany #incompanyContent{
   
 }
-#main4 #main4Content #main4Tab{
+#incompany #incompanyContent #incompanyTab{
   display: flex;
   width:762px;
   height:70px;
   margin-right:0;
 }
-#main4 #main4Content #main4Tab li{
+#incompany #incompanyContent #incompanyTab li{
   border:2px solid #223055;
   border-radius: 35px;
   padding:26px 45px;
@@ -331,17 +345,17 @@ main section > div{
   font-weight: 800;
   margin:0;
 }
-#main4 #main4Content #main4Tab li:first-child{
+#incompany #incompanyContent #incompanyTab li:first-child{
   background-color: #FFB7CA;
 }
-#main4 #main4Content #main4Tab li:hover{
+#incompany #incompanyContent #incompanyTab li:hover{
   background-color: #FFB7CA;
 }
 
-#main4 #main4Content .main4Slider{
+#incompany #incompanyContent .incompanySlider{
   margin-top:40px;
 }
-#main4 #main4Content #main4First .main4SliderLogo{
+#incompany #incompanyContent #incompanyFirst .incompanySliderLogo{
   width:278px;
   height:278px;
   background-color: #c3c3c3;
@@ -351,7 +365,7 @@ main section > div{
   background: url(img/SMclassics.png)no-repeat center/cover;
   background-position:45% center;
 }
-#main4 #main4Content #main4First .main4SliderImage{
+#incompany #incompanyContent #incompanyFirst .incompanySliderImage{
   width:760px;
   height:280px;
   background: url(img/SMclassicsIMG.jpg) no-repeat center/cover;
@@ -359,7 +373,7 @@ main section > div{
   border-radius: 140px;
   margin-left:0;
 }
-#main4 #main4Content .main4Slider p{
+#incompany #incompanyContent .incompanySlider p{
   width:762px;
   height:218px;
   font-size:20px;
@@ -374,26 +388,26 @@ main section > div{
 
 
 
-/* main5 */
-#main5{
+/* news */
+#news{
   width:1920px;
   width:100%;
 }
-#main5 > div{ 
+#news > div{ 
   width:100%;
   display: flex;
   flex-direction: column;
 }
-#main5 h2{
+#news h2{
   margin-left:715px;
   margin-bottom:40px;
 }
-#main5 #main5Content{
+#news #newsContent{
   width:100%;
   display: flex;
   position: relative;
 }
-#main5 #main5Content #main5Text p:nth-child(3),#main5 #main5Content #main5Text p:nth-child(4){
+#news #newsContent #newsText p:nth-child(3),#news #newsContent #newsText p:nth-child(4){
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;          
@@ -401,7 +415,7 @@ main section > div{
   -webkit-line-clamp: 2;
   line-clamp: 2;
 }
-#main5 #main5Content #main5Text{
+#news #newsContent #newsText{
   width:840px;
   margin-right:200px;
   margin-top:240px;
@@ -409,33 +423,33 @@ main section > div{
   position:relative;
   cursor: pointer;
 }
-#main5 #main5Content #main5Text:hover p:nth-child(4){
+#news #newsContent #newsText:hover p:nth-child(4){
   text-decoration:underline;
 }
-#main5 #main5Content #main5Text p:nth-child(3){
+#news #newsContent #newsText p:nth-child(3){
   width:70%;
   font-size: 30px;
   line-height:50px;
   margin-bottom: 30px;
 }
-#main5 #main5Content #main5Text p:nth-child(4){
+#news #newsContent #newsText p:nth-child(4){
   width:60%;
   height:52px;
   font-size:20px;
   line-height:26px;
 }
-#main5 #main5Content #arrowBox {
+#news #newsContent #arrowBox {
   width:278px;
   height:56px;
   border-bottom: 3px solid #FFB7CA;
   position:absolute;
   left: 0;
 }
-#main5 #main5Content #arrowBox .arrow{
+#news #newsContent #arrowBox .arrow{
   width:50px;
   height:50px;
 }
-#main5  #main5Content #main5Text #pinkbox{
+#news  #newsContent #newsText #pinkbox{
   width:90%;
   height:30px;
   background-color: #FFB7CA;
@@ -446,7 +460,7 @@ main section > div{
 }
 
 /* even */
-#main5 #main5Content:nth-child(even){
+#news #newsContent:nth-child(even){
   margin-left: 0;
 }
 
@@ -454,56 +468,55 @@ main section > div{
 
 
 /* odd */
-#main5 #main5Content:nth-child(odd){
+#news #newsContent:nth-child(odd){
   margin-right: 0;
   flex-direction: row-reverse;
 }
-#main5 #main5Content:nth-child(odd) #main5Text{
+#news #newsContent:nth-child(odd) #newsText{
   margin-left:200px;
   margin-right:auto;
 }
-#main5 #main5Content:nth-child(odd) #main5Text p:nth-child(3){
+#news #newsContent:nth-child(odd) #newsText p:nth-child(3){
   text-align: right;
 }
-#main5 #main5Content:nth-child(odd) #arrowBox {
+#news #newsContent:nth-child(odd) #arrowBox {
   right:0;
   left:auto;
 }
-#main5 #main5Content:nth-child(odd) #arrowBox .arrow{
+#news #newsContent:nth-child(odd) #arrowBox .arrow{
   float: right;
 }
-#main5  #main5Content:nth-child(odd) #main5Text #pinkbox{
+#news  #newsContent:nth-child(odd) #newsText #pinkbox{
   right:0;
   left:auto;
 }
 
 
 
-#main5 #main5Content img{
-  width:auto;
-  max-width: 900px;
-  height:auto;
-  max-height: 900px;
+#news #newsContent .newsImg{
+  width:50%;
+  max-width:1000px;
+  min-width:400px;
   object-fit: cover;
   margin:0;
 }
 
 
 
-/* main6 */
-#main6{
+/* summary */
+#summary{
 }
-#main6 h2{
+#summary h2{
   width:760px;
   margin-left:0;
   margin-bottom:50px;
   text-align: right;
 }
 
-#main6 #main6Left{
+#summary #summaryLeft{
   display: flex;
 }
-#main6 #main6LeftDiv{
+#summary #summaryLeftDiv{
   width:760px;
   height:140px;
   display:flex;
@@ -512,18 +525,18 @@ main section > div{
   padding:50px 120px; 
   margin-left:0;
 }
-#main6 #main6LeftDiv p:nth-child(1){
+#summary #summaryLeftDiv p:nth-child(1){
   display:inline;
   width:96px;
   font-size:24px;
 }
-#main6 #main6LeftDiv p:nth-child(2){
+#summary #summaryLeftDiv p:nth-child(2){
   display:inline-block;
   font-size:36px;
   font-weight: 800;
 }
 
-#main6 #main6Right{
+#summary #summaryRight{
   width:620px;
   height:140px;
   background-color: #FFB7CA;
@@ -532,18 +545,18 @@ main section > div{
   padding:20px 144px;
   margin-right:140px;
 }
-#main6 #main6Right b:nth-child(1){
+#summary #summaryRight b:nth-child(1){
   display:inline;
   width:96px;
   font-size:64px;
   margin-right: 20px;
 }
-#main6 #main6Right b:nth-child(2){
+#summary #summaryRight b:nth-child(2){
   display:inline-block;
   font-size:24px;
   color: rgb(255, 24, 24);
 }
-#main6 #main6Circle{
+#summary #summaryCircle{
   width:140px;
   height:140px;
   border:2px solid #223055;
@@ -702,4 +715,15 @@ main section > div{
 
 
 
+
+
+/* 애니메이션 */
+@keyframes moveLeft {
+  0% {
+    transform:translateY(-50%) translateX(-50%); 
+  }
+  100% {
+    transform:translateY(-50%) translateX(-75%); /* 화면 왼쪽 끝으로 이동 */
+  }
+}
 

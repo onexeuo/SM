@@ -2,12 +2,12 @@ $(document).ready(function(){
   const pink = "#FFB7CA";
   const navy = "#223055";
 
-  const main4Fir = $("#main4 #main4Tab li:nth-child(1)");
-  const main4Sec = $("#main4 #main4Tab li:nth-child(2)");
-  const main4Tir = $("#main4 #main4Tab li:nth-child(3)");
-  const main4P = $(".main4Slider p");
-  const main4Logo = $("#main4 #main4Content #main4First .main4SliderLogo");
-  const main4Img = $("#main4 #main4Content #main4First .main4SliderImage");
+  const main4Fir = $("#incompany #incompanyTab li:nth-child(1)");
+  const main4Sec = $("#incompany #incompanyTab li:nth-child(2)");
+  const main4Tir = $("#incompany #incompanyTab li:nth-child(3)");
+  const main4P = $(".incompanySlider p");
+  const main4Logo = $("#incompany #incompanyContent #incompanyFirst .incompanySliderLogo");
+  const main4Img = $("#incompany #incompanyContent #incompanyFirst .incompanySliderImage");
 
 
 
@@ -46,14 +46,13 @@ $(document).ready(function(){
 
 
     const slides = document.querySelectorAll('.slider');
-    const indicator = document.getElementById('main2Indicator');
-    const indiMove = document.getElementById('main2IndiMove');
+    const indiMove = document.getElementById('introIndiMove');
     let currentSlide = 0;
 
     // 슬라이드 업데이트 함수
     function updateSlider() {
         const slideWidth = slides[0].offsetWidth; // 각 슬라이드의 너비
-        document.getElementById('main2TextSliderWrap').style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        document.getElementById('introTextSliderWrap').style.transform = `translateX(-${currentSlide * slideWidth}px)`;
         
         // 인디케이터 위치 업데이트
         const indicatorWidth = (currentSlide + 1) * 33.3;  
@@ -77,12 +76,12 @@ $.ajax({
     const stockPrice = data.finalPrice;
     const stockToday = data.finalToday;
 
-    $('#main6Right b:nth-child(1)').append(`${stockPrice}`);
-    $('#main6Right b:nth-child(2)').append(`${stockToday}`);
+    $('#summaryRight b:nth-child(1)').append(`${stockPrice}`);
+    $('#summaryRight b:nth-child(2)').append(`${stockToday}`);
   },
     error:function(error){
       console.log(error,'cant get price');
-      $('#main6Right b').append('cant get price');
+      $('#summaryRight b').append('cant get price');
     }
 })
 

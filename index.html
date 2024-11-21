@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="sm.css"/>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="sm.js"></script>
   <script type="module" src="server.js"></script>
+  <link rel="stylesheet" href="sm1920.css"/>
+  <link rel="stylesheet" href="smmob.css"/>
   <title>SM</title>
 </head>
 <body>
@@ -17,43 +18,44 @@
         <h1><a href="#"><img src="img/SMlogoWhiteOut.png" alt="SM로고이미지"/></a></h1>
         <nav id="nav">
           <ul id="menu">
+            <li><a href="#">MENU</a></li>
             <li><a href="#">HISTORY</a></li>
             <li><a href="#">ARTIST</a></li>
             <li><a href="#">NEWS</a></li>
             <li><a href="#">*</a></li>
-            <li><a href="#">MENU</a></li>
           </ul>
         </nav>
       </div>
-      <div class="main1Background"></div>
-      <div class="main1Mobal"></div>
+      <div class="visualBackground"></div>
+      <div class="visualMobal"></div>
     </header>
     
     <!-- container -->
     <main id="main">
-      <section id="main1">
+      <section id="visual">
         <div>
-          <b>The Future of</b>
-          <div class="main1img1"></div>
+          <b>The Future</b><b> of</b>
+          <div class="visualimg1"></div>
           <b>Culture</b>
-          <div class="main1img2"></div>
+          <div class="visualimg2"></div>
           <b>Technology</b>
-          <b>Welcome</b>
-          <b>to</b>
-          <div class="main1img3"></div>
+          <b>Welcome </b>
+          <b> to</b>
+          <div class="visualimg3"></div>
+          <b> to</b>
           <b> SM</b>
         </div>
       </section>
       <!-- main1 -->
-      <section id="main2">
+      <section id="intro">
         <div>
           <video class="logomp4" autoplay loop muted>
             <source src="img/smlogomotion.mp4" type="video/mp4" />
           </video>
-          <div id="main2Text">
+          <div id="introText">
             <h2>INTRODUCTION</h2>
-            <div id="main2TextSlider">
-              <div id="main2TextSliderWrap">
+            <div class="introTextSlider">
+              <div id="introTextSliderWrap">
                 <div class="slider s1">
                   <b>SM Entertainment는 아시아를 넘어 글로벌 No.1을 지향합니다.</b>
                   <p>1995년 설립 이래 SM Entertainment는 K-POP의 태동과 진화를 이끌며 엔터테인먼트 업계의 이정표를 세워 왔습니다. 쌓아온 노하우를 발판 삼아, 글로벌 1등 기업으로 도약하겠습니다.</p>
@@ -67,21 +69,21 @@
                   <p>‘K-POP의 선구자’로서 공정한 지배구조로 주주 가치를 제고하는 동시에, 일하고 싶은 조직문화를 조성해 임직원의 헌신에 보답하며 선진적 거버넌스의 ‘업계 표준’이 되겠습니다.</p>
                 </div>
               </div>
-              <div id="main2Indicator">
-                <div id="main2IndiMove"></div>
+              <div id="introIndicator">
+                <div id="introIndiMove"></div>
               </div>
             </div>
           </div>
-          <div id="main2Background1"></div>
-          <div id="main2Background2"></div>
+          <div id="introBackground1"></div>
+          <div id="introBackground2"></div>
         </div>
       </section>
       <!-- main2 -->
-      <section id="main3">
-        <div id="main3Background">
-          <div class="main3Content">
+      <section id="artist">
+        <div id="artistBackground">
+          <div class="artistContent">
             <h2>ARTIST</h2>
-            <div id="main3Svg">
+            <div id="artistSvg">
               <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 1156 486">
                 <defs>
                   <mask id="svgMask1" x="0" y="0" width="1150" height="480">
@@ -93,13 +95,13 @@
                 <path class="svgMask" fill="none" stroke="white" stroke-width="2" d="M687.6,0H59.79C26.77,0,0,26.64,0,59.5v238c0,32.86,26.77,59.5,59.79,59.5h119.58c33.02,0,59.79,26.64,59.79,59.5h0c0,32.86,26.77,59.5,59.79,59.5h787.25c33.02,0,59.79-26.64,59.79-59.5v-238c0-32.86-26.77-59.5-59.79-59.5h-279.03c-33.02,0-59.79-26.64-59.79-59.5h0C747.39,26.64,720.62,0,687.6,0Z"/>
               </svg>
             </div>
-            <div id="main3Text">
+            <div id="artistText">
               <p>aespa</p>
               <img class="arrow" src="img/arrowWhite.png" alt="화살표"/>
             </div>
           </div>
-          <div class="main3Content">
-            <div id="main3Svg">
+          <div class="artistContent">
+            <div id="artistSvg">
               <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 1156 486">
                 <defs>
                   <mask id="svgMask2" x="0" y="0" width="1150" height="480">
@@ -111,13 +113,13 @@
                 <path class="svgMask" fill="none" stroke="white" stroke-width="2" d="M60,0C27,0,0,27,0,60h0c0,33,27,60,60,60h120c33,0,60,27,60,60h0c0,33-27,60-60,60H60c-33,0-60,27-60,60v116c0,33,27,60,60,60h1026c33,0,60-27,60-60h0c0-33-27-60-60-60h-120c-33,0-60-27-60-60h0c0-33,27-60,60-60h120c33,0,60-27,60-60V60c0-33-27-60-60-60H60Z"/>
               </svg>
             </div>
-            <div id="main3Text">
+            <div id="artistText">
               <p>SHINee</p>
               <img class="arrow" src="img/arrowWhite.png" alt="화살표"/>
             </div>
           </div>
-          <div class="main3Content">
-            <div id="main3Svg">
+          <div class="artistContent">
+            <div id="artistSvg">
               <svg id="Layer_3" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 1156 486">
                 <defs>
                   <mask id="svgMask3" x="0" y="0" width="1150" height="480">
@@ -129,41 +131,44 @@
                 <path class="svgMask" fill="none" stroke="white" stroke-width="2" d="M60,0C27,0,0,27,0,60v356c0,33,27,60,60,60h268c33,0,60-27,60-60v-20c0-33,27-60,60-60h250c33,0,60,27,60,60v20c0,33,27,60,60,60h268c33,0,60-27,60-60V60c0-33-27-60-60-60H60Z"/>
               </svg>
             </div>
-            <div id="main3Text">
+            <div id="artistText">
               <p>NCT DREAM</p>
               <img class="arrow" src="img/arrowWhite.png" alt="화살표"/>
             </div>
           </div>
         </div>
+        <b>LET ME INTRODUCE OUR ARTIST </b>
       </section>
         <!-- main3 -->
-      <section id="main4">
+      <section id="incompany">
         <div>
           <h2>Labels In Company</h2>
-          <div id="main4Content">
-            <div id="main4First" class="main4Slider">
-              <div class="main4SliderLogo"></div>
-              <div class="main4SliderImage"></div>
+          <div id="incompanyContent">
+            <div id="incompanyFirst" class="incompanySlider">
+              <div class="incompanySliderLogo"></div>
+              <div class="incompanySliderImage"></div>
             </div>
-            <ul id="main4Tab">
+            <ul id="incompanyTab">
               <li>SM Classics</li>
               <li>SCREAM RECORS</li>
               <li>KRUCIALIZE</li>
             </ul>
-            <div class="main4Slider">
+            <div class="incompanySlider">
               <p>SM Classics는 SM 엔터테인먼트의 클래식 음악 전문 레이블입니다. K-Pop을 오케스트라 버전 및 다양한 편성의 클래식 음악으로 편곡하여 선보이고 있으며, 클래식과 관련된 여러 장르의 음악을 포괄적으로 다루고 있습니다.</p>
             </div>
           </div>
         </div>    
       </section>
       <!-- main4 -->
-      <section id="main5">
+      <section id="news">
         <div>
           <h2>NEWS</h2>
-          <div id="main5Content">
-            <img src="img/NewsImg1.jpg" alt="아이린솔로화보"/>
-            <div id="main5Text">
-              <a href="https://www.smentertainment.com/newsroom/%eb%a0%88%eb%93%9c%eb%b2%a8%eb%b2%b3-%ec%95%84%ec%9d%b4%eb%a6%b0-%ec%b9%b4%ec%9a%b4%ed%8a%b8%eb%8b%a4%ec%9a%b4-%eb%9d%bc%ec%9d%b4%eb%b8%8c-11%ec%9b%94-26%ec%9d%bc-%ec%98%a4%ed%9b%84-5%ec%8b%9c/" target="_blank">
+          <div id="newsContent">
+            <div class="newsImg">
+              <img src="img/NewsImg1.jpg" alt="아이린화보">
+            </div>
+            <div id="newsText">
+              <a href="#" target="_blank">
                 <div id="pinkbox"></div>
                 <div id="arrowBox">
                   <img class="arrow" src="img/arrowNavy.png" alt="화살표"/>
@@ -171,20 +176,16 @@
                 <p>레드벨벳 아이린, 카운트다운 라이브 11월 26일 오후 5시 진행</p>
                 <p>레드벨벳 아이린(에스엠엔터테인먼트 소속)이 전 세계 팬들과 솔로 데뷔의 순간을 함께 기념한다.
 
-                  아이린은 첫 솔로 앨범 ‘Like A Flower’(라이크 어 플라워) 공개 당일인 11월 26일 오후 5시부터 유튜브·틱톡·위버스 레드벨벳 채널에서 ‘IRENE 아이린 ‘Like A Flower’ Countdown Live’(아이린 ‘라이크 어 플라워’ 카운트다운 라이브)를 펼친다.
-                  
-                  이번 방송에서 아이린은 첫 번째 미니앨범에 수록된 곡들의 하이라이트 음원을 함께 듣고 작업 비하인드 및 에피소드를 밝히는 것은 물론, 앨범 언박싱과 팬들의 솔로 데뷔 축하 메시지를 함께 확인하는 등 다채로운 코너로 이번 앨범을 향한 기대를 한층 높일 예정이다.
-                  
-                  더불어 오늘(15일) 0시 레드벨벳 공식 SNS 계정에는 어두운 도시 속 아이린의 빛나는 비주얼이 돋보이는 티저 이미지가 공개, 자유분방하면서도 사랑스러운 분위기로 첫 솔로 활동을 통해 보여줄 아이린의 새로운 매력에 대한 궁금증을 고조시켰다.
-                  
-                  한편, 타이틀 곡 ‘Like A Flower’를 포함한 총 8곡으로 구성된 아이린 첫 솔로 앨범 ‘Like A Flower’는 11월 26일 오후 6시 각종 음악 사이트에서 전곡 음원 릴리즈되며, 이날 음반으로도 발매된다.</p>
+                  아이린은 첫 솔로 앨범 ‘Like A Flower’(라이크 어 플라워) 공개 당일인 11월 26일 오후 5시부터 유튜브·틱톡·위버스 레드벨벳 채널에서 ‘IRENE 아이린 ‘Like A Flower’ Countdown Live’(아이린 ‘라이크 어 플라워’ 카운트다운 라이브)를 펼친다.</p>
               </a>
             </div>
           </div>
-          <div id="main5Content">
-            <img src="img/NewsImg2.jpg" alt="태연솔로앨범사진"/>
-            <div id="main5Text">
-              <a href="https://www.smentertainment.com/newsroom/18%ec%9d%bc-%eb%b0%9c%eb%a7%a4-%ed%83%9c%ec%97%b0-%ec%88%98%eb%a1%9d%ea%b3%a1-disaster%eb%a1%9c-%ec%84%a0%ec%82%ac%ed%95%a0-%ec%9d%b4%ed%86%a0%eb%a1%9d-%ec%99%84/" target="_blank">  
+          <div id="newsContent">
+            <div class="newsImg">
+              <img src="img/NewsImg2.jpg" alt="태연솔로앨범사진"/>
+            </div>
+            <div id="newsText">
+              <a href="#" target="_blank">  
                 <div id="pinkbox"></div>
                 <div id="arrowBox">
                   <img class="arrow" src="img/arrowNavy.png" alt="화살표"/>
@@ -192,20 +193,16 @@
                 <p>‘18일 발매’ 태연, 수록곡 ‘Disaster’로 선사할 이토록 완벽한 재앙</p>
                 <p>소녀시대 태연(에스엠엔터테인먼트 소속)이 수록곡 ‘Disaster’(디재스터)로 올 가을 감수성을 자극한다.
 
-                태연 여섯 번째 미니앨범 수록곡 ‘Disaster’는 거칠고 역동적인 드럼 비트와 벅차오르는 신스 라인이 태연의 호소력 짙은 보컬과 만나 감수성을 극대화하는 Pop Rock 장르의 곡으로, 가사에는 끝이 절망임을 알면서도 기꺼이 뛰어드는 사랑의 감정을 ‘완벽한 재앙’이라는 모순적 표현으로 그려냈다.
-                
-                특히 지난 7일부터 유튜브 태연 채널 등을 통해 순차적으로 공개되고 있는 수록곡 하이라이트 클립은 각 곡의 무드와 어우러진 감각적인 영상미로 좋은 반응을 얻고 있으며, 오늘(13일) 0시 공개된 ‘Disaster’ 버전 역시 태연만의 독보적인 분위기를 잘 담아내 신보에 대한 기대감을 한껏 높였다.
-                
-                태연 여섯 번째 미니앨범 ‘Letter To Myself’(레터 투 마이셀프)는 다양한 상황의 외부 세계를 마주한 자아의 감정과 내면 세계에 집중하는 이야기를 담은 앨범으로, 주체이자 객체가 되어 스스로를 긍정하며 나아가는 모습을 통해 따뜻한 위로의 메시지를 전하고자 했으며, 서정적이면서도 폭발적인 멜로디가 돋보이는 동명의 타이틀 곡을 비롯해 편안하고 차분한 분위기의 R&B, 카리스마 넘치는 Pop 등 다양한 장르의 총 6곡이 수록되어 한층 깊어진 태연의 음악 세계를 만날 수 있다.
-                
-                한편, 태연은 11월 18일 여섯 번째 미니앨범 ‘Letter To Myself’를 발매하며, 이날 오후 4시 30분부터는 유튜브·틱톡 태연 채널 등 온라인과 오프라인에서 카운트다운 라이브를 진행하고 팬들과 가깝게 소통할 예정이다.</p>
+                태연 여섯 번째 미니앨범 수록곡 ‘Disaster’는 거칠고 역동적인 드럼 비트와 벅차오르는 신스 라인이 태연의 호소력 짙은 보컬과 만나 감수성을 극대화하는 Pop Rock 장르의 곡으로, 가사에는 끝이 절망임을 알면서도 기꺼이 뛰어드는 사랑의 감정을 ‘완벽한 재앙’이라는 모순적 표현으로 그려냈다.</p>
               </a>
             </div>
           </div>
-          <div id="main5Content">
-            <img src="img/NewsImg3.jpg" alt="엔씨티드림단체사진"/>
-            <div id="main5Text">
-              <a href="https://www.smentertainment.com/newsroom/nct-dream-%ec%8b%a0%ea%b3%a1-when-im-with-you-%eb%ac%b4%eb%8c%80-%ec%98%a4%eb%8a%9815%ec%9d%bc-%ec%b2%ab-%ea%b3%b5%ea%b0%9c/" target="_blank">
+          <div id="newsContent">
+            <div class="newsImg">
+              <img src="img/NewsImg3.jpg" alt="엔씨티드림단체사진"/>
+            </div>
+            <div id="newsText">
+              <a href="#" target="_blank">
                 <div id="pinkbox"></div>
                 <div id="arrowBox">
                   <img class="arrow" src="img/arrowNavy.png" alt="화살표"/>
@@ -213,53 +210,39 @@
                 <p>NCT DREAM, 신곡 ‘When I’m With You’ 무대 오늘(15일) 첫 공개</p>
                 <p>NCT DREAM(엔시티 드림, 에스엠엔터테인먼트 소속)이 이번 주 음악방송에 출격, 본격적인 컴백 활동에 돌입한다.
 
-                NCT DREAM은 오늘(15일) 방송되는 KBS2 ‘뮤직뱅크’를 시작으로, 16일 MBC ‘쇼! 음악중심’, 17일 SBS ‘인기가요’ 등 각종 음악 프로그램에 출연, 정규 4집 타이틀 곡 ‘When I’m With You’(웬 아임 위드 유) 무대를 펼친다.
-                
-                타이틀 곡 ‘When I’m With You’는 중독성 강한 후렴구가 인상적인 하우스 기반의 일렉트로닉 팝 곡으로, 가사에는 ‘DREAMSCAPE’에서 만나게 된 ‘너’에게 홀린 듯이 빠져들어가는 나의 모습과 ‘너’와 함께 할 때 느끼는 복합적인 감정을 표현했다.
-                
-                더불어 ‘When I’m With You’ 퍼포먼스는 노래의 리듬에 맞춰 다 함께 뛰어노는 듯한 신나는 분위기로 구성, 경쾌한 스텝과 그루브, 섬세한 완급 조절이 돋보이며, 페어 안무와 과거 활동곡을 떠올릴 수 있는 동작까지 어우러져 NCT DREAM의 청량하면서도 파워풀한 매력을 동시에 만날 수 있다.
-                
-                또한 NCT DREAM은 ‘인기가요’에서는 수록곡 ‘Rains in Heaven’(레인스 인 헤븐) 무대도 함께 선사, 월드 투어를 통해 선보여 좋은 반응을 얻었던 만큼 음악방송 무대에도 높은 관심이 기대된다.
-                
-                한편, 11월 11일 발매된 NCT DREAM 정규 4집 ‘DREAMSCAPE’(드림스케이프)는 꿈에 그리던 세상에서 마주한 설렘과 두려움, 자유의 감정을 총 11곡에 걸쳐 유기적으로 구성하여 리스너들의 많은 사랑을 받고 있다.</p>
+                NCT DREAM은 오늘(15일) 방송되는 KBS2 ‘뮤직뱅크’를 시작으로, 16일 MBC ‘쇼! 음악중심’, 17일 SBS ‘인기가요’ 등 각종 음악 프로그램에 출연, 정규 4집 타이틀 곡 ‘When I’m With You’(웬 아임 위드 유) 무대를 펼친다.</p>
               </a>
             </div>
           </div>
-          <div id="main5Content">
-            <img src="img/NewsImg4.jpg" alt="스크림레코즈새앨범표지"/>
-            <div id="main5Text">
-              <a href="https://www.smentertainment.com/newsroom/scream-records-drd-%ec%83%88-%ec%8b%b1%ea%b8%80-turn-up-the-volume-%ec%98%a4%eb%8a%9814%ec%9d%bc-%ec%98%a4%ed%9b%84-2%ec%8b%9c-%ea%b3%b5%ea%b0%9c/" target="_blank">
+          <div id="newsContent">
+            <div class="newsImg">
+              <img src="img/NewsImg4.jpg" alt="스크림레코즈새앨범표지"/>
+            </div>
+            <div id="newsText">
+              <a href="#" target="_blank">
                 <div id="pinkbox"></div>
                 <div id="arrowBox">
                 <img class="arrow" src="img/arrowNavy.png" alt="화살표"/>
                 </div>
                 <p>ScreaM Records, DRD 새 싱글 ‘Turn Up The Volume’ 오늘(14일) 오후 2시 공개</p>
-                <p>SM엔터테인먼트 산하 댄스 뮤직 레이블 ScreaM Records(스크림 레코즈)가 댄스 뮤직 그룹 DRD과 손잡고 선보이는 새 싱글이 오늘(14일) 공개된다.
-
-                DRD의 새 싱글 ‘Turn Up The Volume’(턴 업 더 볼륨)은 11월 14일 오후 2시 멜론, 플로, 지니, 아이튠즈, 애플뮤직, 스포티파이, QQ뮤직, 쿠고우뮤직, 쿠워뮤직 등 각종 글로벌 음악 플랫폼에서 음원 발매된다.
-                
-                이번 신곡 ‘Turn Up The Volume’은 테크노와 하우스의 작업 방식을 기반으로, 반복적인 비트와 강렬한 베이스라인, 몽환적인 신디사이저 그루브가 어우러진 하이브리드 댄스 트랙이다.
-                
-                특히 반복적인 내레이션은 청중을 일으켜 댄스 플로어로 이끄는 주문이자, DRD가 펼쳐갈 세계관의 서막을 알리는 신호탄인 만큼, 몰입의 즐거움을 배가시킬 것으로 보인다.
-                
-                한편, DRD는 2023년 싱글 ‘Bungee’(번지)로 공식 데뷔했으며, 유튜브 채널을 통해 다양한 리믹스 작업을 선보이며 활발히 활동 중이다.</p>
+                <p>SM엔터테인먼트 산하 댄스 뮤직 레이블 ScreaM Records(스크림 레코즈)가 댄스 뮤직 그룹 DRD과 손잡고 선보이는 새 싱글이 오늘(14일) 공개된다.</p>
               </a>
             </div>
           </div>
         </div>
       </section>
       <!-- main5 -->
-      <section id="main6">
+      <section id="summary">
         <div>
           <h2>IR SUMMARY</h2>
-          <div id="main6Left">
-            <div id="main6LeftDiv">
+          <div id="summaryLeft">
+            <div id="summaryLeftDiv">
               <p>주가 정보</p>
               <p>2024.10.17 13:01</p>
             </div>
-            <div id="main6Circle"></div>
+            <div id="summaryCircle"></div>
           </div>
-          <div id="main6Right">
+          <div id="summaryRight">
             <b></b>
             <b></b>
           </div>
