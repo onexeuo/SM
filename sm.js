@@ -8,17 +8,18 @@ $(document).ready(function(){
   const main4P = $(".incompanySlider p");
   const main4Logo = $("#incompany #incompanyContent #incompanyFirst .incompanySliderLogo");
   const main4Img = $("#incompany #incompanyContent #incompanyFirst .incompanySliderImage");
-// 날짜
-function formatDate(date) {
-  const day = String(date.getDate()).padStart(2, '0');
-  const month = String(date.getMonth() + 1).padStart(2, '0'); 
-  const year = String(date.getFullYear()).slice(2); 
-  const hours = String(date.getHours()).padStart(2, '0');
-  const minutes = String(date.getMinutes()).padStart(2, '0');
-
-  return `${day}.${month}.${year} ${hours}:${minutes}`;
-}
-
+  // 날짜
+  function formatDate(date) {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); 
+    const year = String(date.getFullYear()).slice(2); 
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    
+    return `${day}.${month}.${year} ${hours}:${minutes}`;
+  }
+  
+ 
 
   main4Fir.click(function(){
     main4Sec.css("background","none");
@@ -93,14 +94,16 @@ $.ajax({
   success:function(data){
     const stockPrice = data.finalPrice;
     const stockToday = data.finalToday;
+    //날짜
     const currentTime = formatDate(new Date());
-
     $('#summaryLeftDiv p:nth-child(2)').append(currentTime);
+
     $('#summaryRight b:nth-child(1)').append(`${stockPrice}`);
     $('#summaryRight b:nth-child(2)').append(`${stockToday}`);
   },
     error:function(error){
       console.log(error,'cant get price');
+      $('#summaryLeftDiv p:nth-child(2)').append('error')
       $('#summaryRight b').append('cant get price');
     }
 })
