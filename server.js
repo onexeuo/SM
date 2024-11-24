@@ -13,23 +13,46 @@ const port = 3000;
 app.use(cors());
 app.use(express.static('public'));
 
-//어제 대비 오른 투데이
-// (async () => {
-//   const browser = await puppeteer.launch();
-//   const page = await browser.newPage();
-//   await page.goto(targetUrl);
+const interval = 600000;
 
-//   const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
+async function getStockData(){
+  try{
+    const response = await axios.get(targetUrl);
+    const $ = cheerio.load(response.data);
+    const price = $('.fxKbKc').text();
+    console.log('priceee : ' ,price);
 
-//   const replaceToday = today.replace(/[^\d,+-.]/g, '');
-//   const finalToday = replaceToday.replace(/(\.00)$/, '');
+    const stringPrice = price.toString();
+    const replacePrice = stringPrice.replace(/(\.0+)$/, '');
+    console.log('replace : ',replacePrice);
 
-//   console.log('today : ', today);
-//   console.log('replaceToday : ', replaceToday);
-//   console.log('fianlToday : ',finalToday);
+    const finalPrice = replacePrice.replace(/[^\d,]/g, '');
+    console.log('finalPrice : ',finalPrice);
 
-//   await browser.close();
-// })();
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto(targetUrl);
+
+    const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
+    const replaceToday = today.replace(/[^\d,+-.]/g, '');
+    const finalToday = replaceToday.replace(/(\.00)$/, '');
+    console.log('today : ', today);
+    console.log('replaceToday : ', replaceToday);
+    console.log('fianlToday : ',finalToday);
+
+    await browser.close();
+
+    return {finalToday, finalPrice};
+
+  }catch(error){
+    console.log('Error',error);
+    return {error : 'cant get stock data'};
+  }
+}
+setInterval(async () => {
+  const stockData = await getStockData();
+  console.log('stock data', stockData);
+}, interval);
 
 
 // 주가
@@ -46,35 +69,9 @@ app.use(express.static('public'));
 
 app.get('/get-price', async(req, res) => {
   try{
-    const response = await axios.get(targetUrl);
-    const $ = cheerio.load(response.data);
-    const price = $('.fxKbKc').text();
-  
-    console.log('priceee : ' ,price);
-    const stringPrice = price.toString();
+    const stockData = await getStockData();
 
-    const replacePrice = stringPrice.replace(/(\.0+)$/, '');
-    console.log('replace : ',replacePrice);
-
-    const finalPrice = replacePrice.replace(/[^\d,]/g, '');
-    console.log('finalPrice : ',finalPrice);
-
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(targetUrl);
-  
-    const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
-  
-    const replaceToday = today.replace(/[^\d,+-.]/g, '');
-    const finalToday = replaceToday.replace(/(\.00)$/, '');
-  
-    console.log('today : ', today);
-    console.log('replaceToday : ', replaceToday);
-    console.log('fianlToday : ',finalToday);
-    
-    await browser.close();
-
-    res.json({finalToday, finalPrice});
+    res.json(stockData);
   }catch(error){
     console.log('Error');
     res.status(500).json({error : 'not found data'});

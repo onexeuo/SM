@@ -8,7 +8,16 @@ $(document).ready(function(){
   const main4P = $(".incompanySlider p");
   const main4Logo = $("#incompany #incompanyContent #incompanyFirst .incompanySliderLogo");
   const main4Img = $("#incompany #incompanyContent #incompanyFirst .incompanySliderImage");
+// 날짜
+function formatDate(date) {
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0'); 
+  const year = String(date.getFullYear()).slice(2); 
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
 
+  return `${day}.${month}.${year} ${hours}:${minutes}`;
+}
 
 
   main4Fir.click(function(){
@@ -68,6 +77,15 @@ $(document).ready(function(){
     // 초기화
     updateSlider();
 
+// menumodal
+$('.menu').on('click', function(){
+  $('#menuModal').show();
+})
+$('#menuModal').on('click', function(){
+  $('#menuModal').hide();
+})
+
+
 // 주가 가격 가져오기
 $.ajax({
   url:'http://127.0.0.1:3000/get-price',
@@ -75,7 +93,9 @@ $.ajax({
   success:function(data){
     const stockPrice = data.finalPrice;
     const stockToday = data.finalToday;
+    const currentTime = formatDate(new Date());
 
+    $('#summaryLeftDiv p:nth-child(2)').append(currentTime);
     $('#summaryRight b:nth-child(1)').append(`${stockPrice}`);
     $('#summaryRight b:nth-child(2)').append(`${stockToday}`);
   },
