@@ -606,13 +606,13 @@ main section > div{
 
 /* footer */
 #footer{
+  position: relative;
   width:100%;
   height:435px;
   background-color: #111;
   color:#fff;
   display: flex;
 }
-
 #footer #smLogo{
   width:19.31%;
   height:39.08%;
@@ -620,9 +620,9 @@ main section > div{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
+  overflow: hidden;
 }
 #footer #smLogo img{
   width:98px;
@@ -643,7 +643,7 @@ main section > div{
   padding:40px 50px;
   text-align: center;
   overflow: hidden;
-  margin-top: 170px;
+  margin-top: 168px;
   border:2px solid #fff;
 }
 #footer #SNSIcon ul{
@@ -683,13 +683,10 @@ main section > div{
   font-size: 16px;
 }
 
-
-
-
 #footer #famlan{
   width:16.41%;
   height:144px;
-  margin-top: 170px;
+  margin-top: 168px;
 }
 #footer #famlan #familysite{
   width:100%;
@@ -732,9 +729,6 @@ main section > div{
   display: none;
 }
 
-
-
-
 #footer #privacy{
   width:24.38%;
   height:27.82%;
@@ -742,8 +736,9 @@ main section > div{
   flex-direction: column;
   justify-content: center;
   white-space: nowrap;
-  margin-top:314px;
-  border:2px solid #fff;
+  margin-top:312px;
+  border-top:2px solid #fff;
+  border-left:2px solid #fff;
 }
 #footer #privacy p{
   color:#fff;
@@ -787,24 +782,24 @@ main section > div{
   position: absolute;
   width: 500px;
   height: 2px;
-  background-color: #000;
+  background-color: #223055;
 }
 #intro .lineLeft::after{
-  top: 36px; 
-  left:677px; 
+  top: -50px; 
+  left:0px; 
   transform: translateX(-50%) rotate(90deg);
 }
 #intro .lineLeft::before{
-  top:122px; 
-  left: 358px; 
+  top:29px; 
+  left: -340px; 
 }
 #intro .lineLeft .centerBox{
   position:absolute;
   width:12px;
   height:12px;
   background-color: #fff;
-  top:117px;
-  left:671px;
+  top:23px;
+  left:-6px;
   z-index: 2;
 }
 
@@ -819,7 +814,7 @@ main section > div{
   position: absolute;
   width: 296px;
   height: 2px;
-  background-color: #000;
+  background-color: #223055;
 }
 #incompany .lineLeft::after{
   top: 284px; 
@@ -977,6 +972,53 @@ main section > div{
 #summary .lineLeft3 .centerBox{
   top:-6px;
   left:753px;
+}
+
+
+/* footer */
+#footer .lineLeft{
+}
+#footer .lineLeft .centerBox{
+  position:absolute;
+  width:12px;
+  height:12px;
+  background-color: #000000;
+  top:37.5%;
+  left:19%;
+  z-index: 10;
+}
+#footer .lineLeft .centerBox:nth-child(2){
+  left:36.8%;
+}
+#footer .lineLeft .centerBox:nth-child(3){
+  left:59%;
+}
+#footer .lineLeft .centerBox:nth-child(4){
+  left:75.4%;
+}
+#footer .lineLeft .centerBox:nth-child(5){
+  top:62%;
+  left:19%;
+}
+#footer .lineLeft .centerBox:nth-child(6){
+  left:36.8%;
+  top:61.5%;
+}
+#footer .lineLeft .centerBox:nth-child(7){
+  left:59%;
+  top:52%;
+}
+#footer .lineLeft .centerBox:nth-child(8){
+  left:75.4%;
+  top:52%;
+}
+#footer .lineLeft .centerBox:nth-child(9){
+  left:59%;
+  top:70%;
+}
+#footer .lineLeft .centerBox:nth-child(10){
+  left:75.4%;
+  top:70%;
 }
 
 
