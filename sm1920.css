@@ -121,7 +121,7 @@ main section > div{
   font-size:116px;
   color:#FFB7CA;
 }
-#visual>div b:nth-child(10){
+#visual>div b:nth-child(10),#visual>div b:nth-child(11){
   display: none;
 }
 #visual .visualimg1{
@@ -417,7 +417,7 @@ main section > div{
 #news #newsContent .newsImg{
   width:50%;
   max-width:1000px;
-  min-width:400px;
+  min-width:900px;
   object-fit: cover;
   margin:0;
 }
@@ -434,6 +434,7 @@ main section > div{
 }
 #news #newsContent #newsText{
   width:840px;
+  min-width:500px;
   margin-right:200px;
   margin-top:240px;
   z-index: 10;
@@ -612,11 +613,23 @@ main section > div{
   background-color: #111;
   color:#fff;
   display: flex;
+  flex-direction: column;
 }
-#footer #smLogo{
+#footer #footerFirst{
+  width:100%;
+  height:170px;
+  display: flex;
+}
+#footer #footerSecond{
+  width: 100%;
+  height:144px;
+  display: flex;
+}
+#footer #footerFirst #smLogo{
   width:19.31%;
-  height:39.08%;
+  height:100%;
   padding:50px;
+  margin:0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -637,27 +650,13 @@ main section > div{
   margin-left:14px;
 }
 
-#footer #SNSIcon{
-  width:17.71%;
-  height:24.83%;
-  padding:40px 50px;
-  text-align: center;
-  overflow: hidden;
-  margin-top: 168px;
-  border:2px solid #fff;
-}
-#footer #SNSIcon ul{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #footer #contact{
   width:22.2%;
-  height:39.08%;
+  height:100%;
   display: flex;
   justify-content: center;
   padding:28px 50px;
+  margin-left: 17.81%; /* %로 수정 해야함*/
   overflow: hidden;
   white-space: nowrap;
   border:2px solid #fff;
@@ -682,11 +681,25 @@ main section > div{
   margin-bottom: 0px;
   font-size: 16px;
 }
-
+#footer #SNSIcon{
+  width:18.01%;
+  height:108px;
+  padding:40px 40px;
+  text-align: center;
+  overflow: hidden;
+  border:2px solid #fff;
+  margin-left:19.21%;
+  margin-right: 0;
+}
+#footer #SNSIcon ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #footer #famlan{
-  width:16.41%;
+  width:16.51%;
   height:144px;
-  margin-top: 168px;
+  margin-left: 22%;
 }
 #footer #famlan #familysite{
   width:100%;
@@ -736,9 +749,9 @@ main section > div{
   flex-direction: column;
   justify-content: center;
   white-space: nowrap;
-  margin-top:312px;
   border-top:2px solid #fff;
   border-left:2px solid #fff;
+  margin-right:0;
 }
 #footer #privacy p{
   color:#fff;
@@ -808,8 +821,6 @@ main section > div{
   position:relative;
 }
 #incompany .lineLeft::after,#incompany .lineLeft::before{
-  width:100%;
-  height:500px;
   content: '';
   position: absolute;
   width: 296px;
@@ -892,7 +903,6 @@ main section > div{
   left:-5px;
 }
 #news .lineLeft3::after{
-  width:360px;
   top: 1620px; 
   left: 998px;  
 }
@@ -905,7 +915,6 @@ main section > div{
   left:992px;
 }
 #news .lineLeft4::after{
-  width:360px;
   top:1115px;
   left:-358px;
   transform: translateX(50%) rotate(90deg);
@@ -929,7 +938,7 @@ main section > div{
   position: absolute;
   width: 290px;
   height: 2px;
-  background-color: #000;
+  background-color: #223055;
 }
 #summary .lineLeft::after{
   top: 206px; 
@@ -976,19 +985,17 @@ main section > div{
 
 
 /* footer */
-#footer .lineLeft{
-}
 #footer .lineLeft .centerBox{
   position:absolute;
   width:12px;
   height:12px;
-  background-color: #000000;
-  top:37.5%;
+  background-color: #ff0000;
+  top:37.6%;
   left:19%;
   z-index: 10;
 }
 #footer .lineLeft .centerBox:nth-child(2){
-  left:36.8%;
+  left:36.9%;
 }
 #footer .lineLeft .centerBox:nth-child(3){
   left:59%;
@@ -996,29 +1003,30 @@ main section > div{
 #footer .lineLeft .centerBox:nth-child(4){
   left:75.4%;
 }
+
 #footer .lineLeft .centerBox:nth-child(5){
   top:62%;
   left:19%;
 }
 #footer .lineLeft .centerBox:nth-child(6){
-  left:36.8%;
-  top:61.5%;
+  left:36.9%;
+  top:62.3%;
 }
 #footer .lineLeft .centerBox:nth-child(7){
   left:59%;
-  top:52%;
+  top:52.8%;
 }
 #footer .lineLeft .centerBox:nth-child(8){
   left:75.4%;
-  top:52%;
+  top:52.8%;
 }
 #footer .lineLeft .centerBox:nth-child(9){
   left:59%;
-  top:70%;
+  top:70.7%;
 }
 #footer .lineLeft .centerBox:nth-child(10){
   left:75.4%;
-  top:70%;
+  top:70.7%;
 }
 
 

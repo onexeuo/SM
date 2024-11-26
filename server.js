@@ -66,7 +66,6 @@ setInterval(async () => {
 //   })
 
 
-
 app.get('/get-price', async(req, res) => {
   try{
     const stockData = await getStockData();
@@ -77,7 +76,6 @@ app.get('/get-price', async(req, res) => {
     res.status(500).json({error : 'not found data'});
   }
 });
-
 
 app.listen(port, () => {
   console.log('server running');
