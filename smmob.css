@@ -154,16 +154,10 @@
 }
 #incompany #incompanyContent #incompanyTab{
   width:50%;
-  height:auto;
-  flex-direction:column;
 }
 #incompany #incompanyContent #incompanyTab li{
-  border: 1px solid #223055;
   font-size:16px;
-  white-space: nowrap;
   padding:10px;
-  text-align: right;
-  margin-top:-1px;
 }
 #incompany #incompanyContent #incompanyFirst .incompanySliderLogo{
   width:106px;
@@ -175,7 +169,6 @@
 #incompany #incompanyContent #incompanyFirst .incompanySliderImage{
   width:204px;
   height:204px;
-  border: 1px solid #223055;
 }
 #incompany #incompanyContent .incompanySlider p{
   width:310px;
@@ -183,7 +176,6 @@
   font-size:14px;
   padding:20px 22px;
   border-radius: 20px;
-  border:1px solid #223055;
 
 }
 
@@ -264,18 +256,12 @@
   margin-right:0;
   margin-bottom:1px;
 }
-#summary #summaryLeftDiv p:nth-child(1){
-  display: none;
-}
+
 #summary #summaryLeftDiv p:nth-child(2){
   font-size:14px;
-  line-height: 28px;
-  white-space: nowrap;
+  line-height: 12px;
   font-weight: 400;
   text-align: center;
-}
-#summary #summaryCircle{
-  display: none;
 }
 #summary #summaryRight{
   width:60%;
@@ -308,7 +294,6 @@
   width:40px;
   height: 40px;
   margin-top:1px;
-  border:1px solid #223055;
 }
 #summary #pinkBox{
   width:58.5%;

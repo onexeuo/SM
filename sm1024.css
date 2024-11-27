@@ -54,10 +54,6 @@ main section > div{
   background-position:center 92%;
   margin:10px 14px 0 0px;
 }
-/* intro */
-#intro video{
-  width:700px;
-}
 
 /* artist */
 #artist{
@@ -88,6 +84,7 @@ main section > div{
 #incompany #incompanyContent #incompanyTab li{
   font-size: 23px;
   padding: 24px 27px;
+  white-space: nowrap;
 }
 #incompany #incompanyContent .incompanySlider p{
   width:635px;
@@ -123,6 +120,19 @@ main section > div{
 #news #newsContent:nth-child(odd) .newsImg{
   margin-left:auto;
 }
+#news #newsContent #newsText p:nth-child(3){
+  font-size:34px;
+  line-height: 50px;
+}
+#news #newsContent #arrowBox {
+  top:-2px;
+}
+#news  #newsContent #newsText #pinkbox{
+  height:30px;
+  top:76px;
+}
+
+
 
 /* summary */
 #summary>div #summaryWrapper{
@@ -223,7 +233,6 @@ main section > div{
   left:150px;
 }
 #incompany .lineLeft .centerBox{
-  background-color: rgb(255, 255, 255);
   left:275px;
 }
 /* news */
@@ -239,7 +248,6 @@ main section > div{
   left:640px;
 }
 #news .lineLeft .centerBox{
-  background-color: rgb(255, 255, 255);
   top:459px;
   left:692px;
 }

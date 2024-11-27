@@ -151,18 +151,96 @@ header nav ul li:first-child{
   margin-left:180px;
 }
 
+/* incompany */
+#incompany #incompanyContent #incompanyFirst .incompanySliderLogo{
+  width:185px;
+  height:185px;
+  margin-right:0px ;
+}
+#incompany #incompanyContent #incompanyFirst .incompanySliderImage{
+  width:486px;
+  height:486px;
+  border:1px solid #223055;
+  border-radius: 50%;
+}
+#incompany #incompanyContent #incompanyTab{
+  width:185px;
+  height:auto;
+  flex-direction:column;
+  margin-top:-1px;
+}
+#incompany #incompanyContent #incompanyTab li{
+  font-size: 24px;
+  padding: 18px 18px;
+  font-size: 18px;
+  text-align: right;
+  margin-top:-1px;
 
+}
+#incompany #incompanyContent .incompanySlider p{
+  width:672px;
+  padding:32px 80px;
+}
 
+/* news */
+#news{
+  width:768px;
+  width:100%;
+}
+#news #newsContent .newsImg{
+  min-width:600px;
+}
+#news #newsContent #newsText,#news #newsContent:nth-child(odd) #newsText{
+  width:672px;
+  min-width:672px;
+}
+#news #newsContent #newsText p:nth-child(3){
+  font-size: 30px;
+  line-height: 44px;
+}
+#news #newsContent #arrowBox {
+  width:230px;
+  top:-8px;
+  border-bottom: 2px solid #FFB7CA;
+}
+#news  #newsContent #newsText #pinkbox{
+  top:66px;
+}
 
+/* summary */
+#summary>div #summaryWrapper,#summary h2{
+  width:672px;
+}
+#summary h2{
+  margin-left:-200px;
+}
+#summary #summaryLeftDiv{
+  height:80px;
 
-
-
-
-
-
-
-
-
+}
+#summary #summaryLeftDiv p:nth-child(1){
+  display: none;
+}
+#summary #summaryLeftDiv p:nth-child(2){
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 18px;
+}
+#summary #summaryRight{
+  height:100px;
+  padding: 10px 0px;
+}
+#summary #summaryRight b:nth-child(1){
+  font-size: 46px;
+  line-height: 76px;
+  margin-right:20px;
+}
+#summary #summaryRight b:nth-child(2){
+  font-size: 24px;
+}
+#summary #pinkBox{
+  height:99px;
+}
 
 
 
@@ -172,11 +250,115 @@ header nav ul li:first-child{
 #intro .lineLeft::after,#intro .lineLeft::before{
   height: 1px;
 }
+#intro .lineLeft::after{
+  top:-76px;
+}
 #intro .lineLeft .centerBox{
   width:8px;
   height:8px;
-  top:25px;
+  top:20px;
   left:-4px;
+}
+#incompany .lineLeft::after,#incompany .lineLeft::before{
+  height: 1px;
+}
+#incompany .lineLeft::after{
+  width:430px;
+  top:300px;
+  left:486px;
+}
+#incompany .lineLeft::before{
+  width:360px;
+  top:184px;
+  left:220px;
+}
+#incompany .lineLeft .centerBox{
+  top:180px;
+  left:480px;
+}
+
+#incompany .lineLeft2::before{
+  top:484px;
+}
+#incompany .lineLeft2 .centerBox{
+  top:478px;
+}
+
+/* news */
+#news .lineLeft::after,#news .lineLeft::before{
+  width:160px;
+}
+#news .lineLeft::after{
+  top:410px;
+  left:598px;
+}
+#news .lineLeft::before{
+  top:396px;
+  left:546px;
+}
+#news .lineLeft .centerBox{
+  top:393px;
+  left:592px;
+}
+#news .lineLeft2::after{
+  top:440px;
+  left:-158px;
+}
+#news .lineLeft2::before{
+  top:417px;
+  left:-100px;
+}
+#news .lineLeft2 .centerBox{
+  top:412px;
+  left:-4px;
+}
+#news .lineLeft3::after{
+  top: 920px; 
+  left: 598px;  
+}
+#news .lineLeft3::before{
+  top: 898px; 
+  left: 530px; 
+}
+#news .lineLeft3 .centerBox{
+  top:893px;
+  left:592px;
+}
+#news .lineLeft4::after{
+  top:610px;
+  left:-158px;
+  transform: translateX(50%) rotate(90deg);
+}
+#news .lineLeft4::before{
+  top:598px;
+  left:-100px;
+}
+#news .lineLeft4 .centerBox{
+  top:593px;
+  left:-4px;
+}
+/* summary */
+#summary .lineLeft::after,#summary .lineLeft::before{
+  width:200px;
+}
+#summary .lineLeft::after{
+  top: 140px; 
+  left: 268px;  
+}
+#summary .lineLeft::before{
+  top:78px;
+  left: 206px; 
+}
+#summary .lineLeft .centerBox{
+  left:262px;
+  top:73px;
+}
+#summary .lineLeft2::before{
+  top:176px;
+  left:206px;
+}
+#summary .lineLeft2 .centerBox{
+  top:171px;
 }
 
 

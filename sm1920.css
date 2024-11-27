@@ -446,8 +446,8 @@ main section > div{
 }
 #news #newsContent #newsText p:nth-child(3){
   width:70%;
-  font-size: 30px;
-  line-height:50px;
+  font-size: 40px;
+  line-height:60px;
   margin-bottom: 30px;
 }
 #news #newsContent #newsText p:nth-child(4){
@@ -458,9 +458,10 @@ main section > div{
 }
 #news #newsContent #arrowBox {
   width:278px;
-  height:56px;
+  height:55px;
   border-bottom: 3px solid #FFB7CA;
   position:absolute;
+  top:8px;
   left: 0;
 }
 #news #newsContent #arrowBox .arrow{
@@ -469,12 +470,12 @@ main section > div{
 }
 #news  #newsContent #newsText #pinkbox{
   width:90%;
-  height:30px;
+  height:34px;
   background-color: #FFB7CA;
   z-index:-1;
   opacity: 0.6;
   position:absolute;
-  top:74px;
+  top:94px;
 }
 
 /* even */
@@ -556,6 +557,7 @@ main section > div{
   font-size:36px;
   font-weight: 800;
   line-height: 36px;
+  
 }
 
 #summary #summaryRight{
@@ -989,7 +991,7 @@ main section > div{
   position:absolute;
   width:12px;
   height:12px;
-  background-color: #ff0000;
+  background-color: #000000;
   top:37.6%;
   left:19%;
   z-index: 10;
