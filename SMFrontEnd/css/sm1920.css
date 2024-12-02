@@ -910,8 +910,8 @@ main section > div{
   left:992px;
 }
 #news .lineLeft4::after{
-  top:1115px;
-  left:-358px;
+  top:1055px;
+  left:-248px;
   transform: translateX(50%) rotate(90deg);
 }
 #news .lineLeft4::before{

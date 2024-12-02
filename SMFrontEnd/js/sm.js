@@ -98,8 +98,16 @@ $.ajax({
     const currentTime = formatDate(new Date());
     $('#summaryLeftDiv p:nth-child(2)').append(currentTime);
 
+    if (stockToday.startsWith('+')) {
+      $('#summaryRight b:nth-child(2)').text(stockToday).css('color', 'red');
+    } else if (stockToday.startsWith('-')) {
+      $('#summaryRight b:nth-child(2)').text(stockToday).css('color', 'blue');
+    } else {
+      $('#summaryRight b:nth-child(2)').text(stockToday);
+    }
+
     $('#summaryRight b:nth-child(1)').append(`${stockPrice}`);
-    $('#summaryRight b:nth-child(2)').append(`${stockToday}`);
+    // $('#summaryRight b:nth-child(2)').append(`${stockToday}`);
   },
     error:function(error){
       console.log(error,'cant get price');
@@ -107,8 +115,6 @@ $.ajax({
       $('#summaryRight b').append('cant get price');
     }
 })
-
-
 
 
 });

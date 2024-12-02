@@ -1,6 +1,5 @@
 // sm 주가 정보 가져오기 https://www.google.com/finance/quote/041510:KOSDAQ?sa=X&ved=2ahUKEwijkvbwluiJAxV3s1YBHfVMH40Q3ecFegQIPxAX
 
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 const targetUrl = "https://www.google.com/finance/quote/041510:KOSDAQ?sa=X&ved=2ahUKEwijkvbwluiJAxV3s1YBHfVMH40Q3ecFegQIPxAX";
 const axios = require('axios');
 const cheerio = require('cheerio');
@@ -33,7 +32,7 @@ async function getStockData(){
     const page = await browser.newPage();
     await page.goto(targetUrl);
 
-    const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
+    const today = await page.$eval('span.P2Luy.Ebnabc.ZYVHBb', el => el.textContent);
     const replaceToday = today.replace(/[^\d,+-.]/g, '');
     const finalToday = replaceToday.replace(/(\.00)$/, '');
     console.log('today : ', today);
@@ -53,7 +52,6 @@ setInterval(async () => {
   const stockData = await getStockData();
   console.log('stock data', stockData);
 }, interval);
-
 
 // 주가
 // axios.get(targetUrl)
