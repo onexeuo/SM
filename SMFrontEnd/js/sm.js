@@ -19,7 +19,7 @@ $(document).ready(function(){
     return `${day}.${month}.${year} ${hours}:${minutes}`;
   }
   
- 
+
 
   main4Fir.click(function(){
     main4Sec.css("background","none");
@@ -54,7 +54,6 @@ $(document).ready(function(){
     main4P.append(`KRUCIALIZE는 ARTIST와 KREW가 주체성을 가지고, 음악과 음악으로부터 파생되는 다양한 콘텐츠를 제작하는 SM Entertainment 산하 뮤직 레이블입니다. K-POP의 본질에 새로운 숨을 불어넣어 장르적 스펙트럼을 넓히고, 차별화된 독자적인 콘텐츠를 추구합니다.`);
   });
 
-
     const slides = document.querySelectorAll('.slider');
     const indiMove = document.getElementById('introIndiMove');
     let currentSlide = 0;
@@ -84,7 +83,7 @@ $('.menu').on('click', function(){
 })
 $('#menuModal').on('click', function(){
   $('#menuModal').hide();
-})
+});
 
 
 // 주가 가격 가져오기

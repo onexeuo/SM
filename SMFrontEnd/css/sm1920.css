@@ -238,10 +238,11 @@ main section > div{
   background: #223055;
   position:relative;
   margin:0 auto 176px;
+  overflow: hidden;
 }
 #artist h2{
+  width:1150px;
   color:#FFB7CA;
-  margin-left:0;
 }
 #artist b{
   display: flex;
@@ -270,8 +271,8 @@ main section > div{
   flex-direction: column;
   align-items: center;
   z-index: 1;
+  transition:transform 1s ease-in-out;
 }
-
 #artist .artistContent .svgMask{
   stroke-width: 2;
   transform:scale(1,1);
@@ -307,10 +308,9 @@ main section > div{
 #artist .artistContent #artistText img{
   margin-left:340px;
 }
-#artist .artistContent:nth-child(2),#artist .artistContent:nth-child(3){
+#artist .artistContent:nth-child(3),#artist .artistContent:nth-child(4){
   display: none;
 }
-
 
 /* incompany */
 #incompany{
@@ -339,9 +339,6 @@ main section > div{
   white-space: nowrap;
 }
 #incompany #incompanyContent #incompanyTab li:first-child{
-  background-color: #FFB7CA;
-}
-#incompany #incompanyContent #incompanyTab li:hover{
   background-color: #FFB7CA;
 }
 
@@ -408,8 +405,7 @@ main section > div{
   position: relative;
 }
 #news #newsContent .newsImg{
-  width:50%;
-  max-width:1000px;
+  max-width:900px;
   min-width:900px;
   object-fit: cover;
   margin:0;
@@ -863,21 +859,21 @@ main section > div{
 }
 #news .lineLeft::after{
   width:250px;
-  top: 728px; 
-  left: 998px;  
+  top: 658px; 
+  left: 899px;  
   transform: translateX(-50%) rotate(90deg);
 }
 #news .lineLeft::before{
-  top: 664px; 
-  left: 900px; 
+  top: 598px; 
+  left: 830px; 
 }
 #news .lineLeft .centerBox{
   position:absolute;
   width:12px;
   height:12px;
   background-color: #ffffff;
-  top:659px;
-  left:993px;
+  top:594px;
+  left:893px;
   z-index: 2;
 }
 #news #newsContent:nth-child(odd) .lineLeft::before{
@@ -885,42 +881,42 @@ main section > div{
 }
 #news .lineLeft2::after{
   width:360px;
-  top:817px;
+  top:717px;
   left:-358px;
   transform: translateX(50%) rotate(90deg);
 }
 #news .lineLeft2::before{
-  top:698px;
+  top:628px;
   left:-400px;
 }
 #news .lineLeft2 .centerBox{
-  top:693px;
-  left:-5px;
+  top:623px;
+  left:-4px;
 }
 #news .lineLeft3::after{
-  top: 1620px; 
-  left: 998px;  
+  top: 1410px; 
+  left: 899px;  
 }
 #news .lineLeft3::before{
-  top: 1498px; 
-  left: 900px; 
+  top: 1348px; 
+  left: 830px; 
 }
 #news .lineLeft3 .centerBox{
-  top:1493px;
-  left:992px;
+  top:1343px;
+  left:893px;
 }
 #news .lineLeft4::after{
-  top:1055px;
+  top:955px;
   left:-248px;
   transform: translateX(50%) rotate(90deg);
 }
 #news .lineLeft4::before{
-  top:998px;
+  top:898px;
   left:-400px;
 }
 #news .lineLeft4 .centerBox{
-  top:993px;
-  left:-5px;
+  top:893px;
+  left:-4px;
 }
 
 
