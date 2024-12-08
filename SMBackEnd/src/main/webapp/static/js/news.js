@@ -20,3 +20,5 @@ function updateTime() {
 
         // 페이지 로드 시에도 한번 실행
         window.onload = updateTime;
+
+        
