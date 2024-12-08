@@ -15,15 +15,16 @@
 <body>
 	<div id="wrapper">
 		<h1>Add News</h1>
+		<div id="date">
+			현재 시간: <span id="current-time"></span>
+		</div><br />
 		<div id="title">
 			TITLE : <input type="text"/>
 		</div><br />
 		<div id="title">
 			CONTENT : <input type="text"/>
 		</div><br />
-		<div>
-			현재 시간: <span id="current-time"></span>
-		</div>
+		<button type="submit" >add</button>
 	</div>
 </body>
 </html>
