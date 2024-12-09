@@ -12,6 +12,13 @@ section{
 main section > div{
   width:916px;
 }
+/* intro */
+#intro #smlogoMotion{
+  margin-bottom:0px;
+  margin-left:100px;
+}
+
+/* visual */
 #visual{
   width:916px;
 }

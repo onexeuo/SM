@@ -173,14 +173,12 @@ main section > div{
   margin-top:176px;
   background:linear-gradient(to right, #ffe8ee, #ffffff) ;
   display: flex;
-}
-#intro section{
   position:relative;
 }
 
-#intro video{
-  height:650px;
-  object-fit: cover;
+#intro #smlogoMotion{
+  width:700px;
+  margin-bottom:-130px;
 }
 #intro h2{
   display: inline-block;
@@ -790,7 +788,7 @@ main section > div{
 }
 #intro .lineLeft::after{
   top: -50px; 
-  left:0px; 
+  left:1px; 
   transform: translateX(-50%) rotate(90deg);
 }
 #intro .lineLeft::before{
@@ -801,9 +799,9 @@ main section > div{
   position:absolute;
   width:12px;
   height:12px;
-  background-color: #fff;
+  background-color: #fef7f7;
   top:23px;
-  left:-6px;
+  left:-5px;
   z-index: 2;
 }
 

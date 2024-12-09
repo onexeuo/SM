@@ -14,6 +14,7 @@ app.use(express.static('public'));
 
 const interval = 600000;
 
+
 async function getStockData(){
   try{
     const response = await axios.get(targetUrl);

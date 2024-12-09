@@ -109,8 +109,9 @@ header nav ul li:first-child{
 #intro{
   width:100%;
 }
-#intro video{
-  height:400px;
+#intro #smlogoMotion{
+  width:500px;
+  margin-left:30px;
 }
 #intro #introText{
   width:672px;
