@@ -16,6 +16,10 @@
 <br /><br />
   <img src="https://github.com/user-attachments/assets/acaca32b-f4c1-403a-a014-65e5ca29e685"/>
 <br /><br />
+<img width="500" src="https://github.com/user-attachments/assets/37260c70-cabd-4357-8866-4b941871791c"/>
+
+(로고 모션 영상을 배경색은 지우고 gif로 수정)
+<br /><br />
 ① 로고 모션 영상<br />
 ② 슬라이드 (회사 소개 문구를 슬라이드)<br />
 <br /><br />
