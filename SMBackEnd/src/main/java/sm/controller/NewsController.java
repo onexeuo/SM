@@ -15,13 +15,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import sm.domain.NewsDTO;
 import sm.service.NewsService;
 
 @RestController
-@RequestMapping("/news")
+@RequestMapping("/news/*")
 public class NewsController {
 
 	private final NewsService newsService;
@@ -31,7 +32,8 @@ public class NewsController {
 		this.newsService = newsService;
 	}
 	
-	@GetMapping
+//	@GetMapping
+	@RequestMapping(value="/list", method= RequestMethod.GET)
 	public ResponseEntity<List<NewsDTO>> newsList(Model model) throws Exception {
 		List<NewsDTO> restNewsList = newsService.newsList();
 		model.addAttribute("restNewsList", restNewsList);

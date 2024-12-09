@@ -15,8 +15,7 @@
 <body>
 	<div id="wrapper">
 		<h1>News</h1>
-				<a href="/news/list">list</a>
-		
+		<a href="/news/list">list</a>
 		<ul id="listHeader">
 			<li>number</li>
 			<li>title</li>
