@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="sm.dao.NewsDao">
-
+<mapper namespace="NewsDTO">
+	<insert id="insertNews" parameterType="NewsDTO">
+		INSERT INTO NEWS
+		VALUES(SEQ_NEWS.NEXTVAL, #{newstitle}, #{newscontent}, CURRENT_TIMESTAMP, #{newsimg})
+	</insert>
+	<select id="newsList" resultType="NewsDTO">
+		SELECT * FROM NEWS
+		ORDER BY NEWSDATE DESC
+	</select>
+	<select id="selectNews" parameterType="int" resultType="NewsDTO">
+		SELECT * FROM NEWS
+		WHERE NEWSNUM = #{newsnum}
+	</select>
+	<update id="updateNews" parameterType="NewsDTO">
+		UPDATE NEWS
+		SET NEWSTITLE=#{newstitle}, NEWSCONTENT=#{newscontent}, NEWSDATE=CURRENT_TIMESTAMP
+		WHERE NEWSNUM =#{newsnum}
+	</update>
+	<delete id="deleteNews" parameterType="int">
+		DELETE NEWS
+		WHERE NEWSNUM=#{newsnum}
+	</delete>
 </mapper>

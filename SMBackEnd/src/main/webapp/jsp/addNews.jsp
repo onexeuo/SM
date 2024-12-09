@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>add news</title>
-<script type="text/javascript" src="../static/js/news.js"></script>
+<script type="text/javascript" src="../static/js/addNews.js"></script>
 <script>
 	
 </script>

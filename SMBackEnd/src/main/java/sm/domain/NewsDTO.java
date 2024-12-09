@@ -3,12 +3,20 @@ package sm.domain;
 import java.sql.Timestamp;
 import java.util.Arrays;
 
+import javax.annotation.Generated;
+
+
 public class NewsDTO {
+	
 	private int newsNum; // 뉴스 번호 
 	private String newsTitle; // 뉴스 제목
 	private String newsContent; //뉴스 내용
 	private Timestamp newsDate; //뉴스 작성 일
 	private byte[] newsImg; //뉴스 이미지 
+	
+	public NewsDTO() {
+	}
+	
 	public NewsDTO(int newsNum, String newsTitle, String newsContent, Timestamp newsDate, byte[] newsImg) {
 		super();
 		this.newsNum = newsNum;

@@ -15,8 +15,18 @@
 <body>
 	<div id="wrapper">
 		<h1>News</h1>
-		<ul>
-			<li><a href=""></a></li>
+		<ul id="listHeader">
+			<li>number</li>
+			<li>title</li>
+			<li>content</li>
+			<li>date</li>
+		</ul>
+		<ul id="listBody">
+			<c:forEach var="news" items="${newsList}">
+				<li>${news.newstitle}</li>
+				<li>${news.newscontent}</li>
+				<li>${news.newsdate}</li>
+			</c:forEach>
 		</ul>
 	</div>
 </body>

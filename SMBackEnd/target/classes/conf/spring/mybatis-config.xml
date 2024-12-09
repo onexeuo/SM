@@ -6,8 +6,8 @@
         <setting name="jdbcTypeForNull" value="VARCHAR"/>
     </settings>  
 	<typeAliases>
-<!--         <typeAlias type="tot.common.page.PageDTO" alias="PageDTO"/>
-		<typeAlias type="tot.common.page.PageReqDTO" alias="PageReqDTO"/>
+        <typeAlias type="sm.domain.NewsDTO" alias="NewsDTO"/>
+	<!-- 	<typeAlias type="tot.common.page.PageReqDTO" alias="PageReqDTO"/>
 		<typeAlias type="tot.common.page.PageResDTO" alias="PageResDTO"/> -->
         <package name="sm.domain"/>
     </typeAliases>
