@@ -36,6 +36,7 @@
             </list>
         </property>
     </bean>
+    <context:component-scan base-package="sm.controller, sm.dao, sm.service" />
 
 </beans>
 

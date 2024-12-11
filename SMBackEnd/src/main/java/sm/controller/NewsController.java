@@ -22,7 +22,7 @@ import sm.domain.NewsDTO;
 import sm.service.NewsService;
 
 @RestController
-@RequestMapping("/news/*")
+@RequestMapping("/")
 public class NewsController {
 
 	private final NewsService newsService;
@@ -33,12 +33,20 @@ public class NewsController {
 	}
 	
 //	@GetMapping
-	@RequestMapping(value="/list", method= RequestMethod.GET)
-	public ResponseEntity<List<NewsDTO>> newsList(Model model) throws Exception {
-		List<NewsDTO> restNewsList = newsService.newsList();
-		model.addAttribute("restNewsList", restNewsList);
-		return ResponseEntity.ok(restNewsList);
-//		return "news";
+//	@RequestMapping(value="/list", method= RequestMethod.GET)
+//	public String newsList(Model model) throws Exception {
+//		List<NewsDTO> restNewsList = newsService.newsList();
+//		model.addAttribute("restNewsList", restNewsList);
+//		System.out.printf("rest news list : %d\n",restNewsList.size());
+//		if(restNewsList.isEmpty()) {
+//			System.out.print("no news found!");
+//		}
+//		return "views/list";
+////		return "news";
+//	}
+	@PostMapping(value="/list")
+	public String newsList(Model model) throws Exception{
+		return "gg";
 	}
 
 	@GetMapping(value="/{newsNum}")
