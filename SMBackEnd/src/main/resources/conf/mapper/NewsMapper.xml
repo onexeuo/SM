@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="sm.dao.NewsDao">
+
+	<resultMap id="NoticeResultMap" type="sm.domain.NewsDTO">
+	    <id property="newsNum" column="newsnum"/>
+	    <result property="nesTitle" column="newstitle"/>
+	    <result property="newsContent" column="newscontent"/>
+	    <result property="newsDate" column="newsdate"/>
+	    <result property="newsImg" column="newsimg"/>
+	</resultMap>
+
 	<insert id="insertNews" parameterType="NewsDTO">
 		INSERT INTO NEWS
-		VALUES(SEQ_NEWS.NEXTVAL, #{newstitle}, #{newscontent}, CURRENT_TIMESTAMP, #{newsimg})
+		VALUES(SEQ_NEWS.NEXTVAL, #{newstitle}, #{newscontent}, #{newsdate}, #{newsimg})
 	</insert>
 	<select id="newsList" resultType="NewsDTO">
 		SELECT * FROM NEWS

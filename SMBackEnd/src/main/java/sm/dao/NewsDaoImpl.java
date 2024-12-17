@@ -11,9 +11,9 @@ import sm.domain.NewsDTO;
 @Repository
 public class NewsDaoImpl implements NewsDao {
 
-	@Autowired
 	private SqlSession sqlSession;
 	
+	@Autowired
 	public NewsDaoImpl(SqlSession sqlSession) throws Exception {
 		this.sqlSession = sqlSession;
 	}
@@ -33,7 +33,7 @@ public class NewsDaoImpl implements NewsDao {
 		List<NewsDTO> newsList = sqlSession.selectList("NewsDTo.newsList");
 		System.out.printf(" sql query result ; ", newsList);
 //		return sqlSession.selectList("NewsDTO.newsList");
-		return newsList;
+		return sqlSession.selectList("sm.dao.NewsDao.newsList");
 	}
 
 	@Override
@@ -45,5 +45,6 @@ public class NewsDaoImpl implements NewsDao {
 	public int deleteNews(int newsNum) throws Exception {
 		return sqlSession.delete("NewsDTO.deleteNews", newsNum);
 	}
+	
 
 }

@@ -6,14 +6,15 @@ import sm.domain.NewsDTO;
 
 public interface NewsDao {
 	
-	public abstract List<NewsDTO> newsList() throws Exception;
+	 List<NewsDTO> newsList() throws Exception;
 	
-	public abstract NewsDTO selectNews(int newsNum) throws Exception;
+	 NewsDTO selectNews(int newsNum) throws Exception;
 	
-	public abstract int insertNews(NewsDTO newsDTO) throws Exception;
+	 int insertNews(NewsDTO newsDTO) throws Exception;
 	
-	public abstract int updateNews (NewsDTO newsDTO) throws Exception;
+	 int updateNews (NewsDTO newsDTO) throws Exception;
 	
-	public abstract int deleteNews (int newsNum) throws Exception;
+	 int deleteNews (int newsNum) throws Exception;
+
 	
 }

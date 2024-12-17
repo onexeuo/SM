@@ -12,6 +12,7 @@ import sm.domain.NewsDTO;
 @Service
 public class NewsServiceImpl implements NewsService {
 	
+//	private static final NewsDTO NewsDTO = null;
 	private final NewsDao newsDao;
 
 	@Autowired
@@ -45,5 +46,6 @@ public class NewsServiceImpl implements NewsService {
 	public int deleteNews(int newsNum) throws Exception {
 		return newsDao.deleteNews(newsNum);
 	}
+
 
 }

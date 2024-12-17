@@ -15,7 +15,7 @@
 <body>
 	<div id="wrapper">
 		<h1>News</h1>
-				<a href="/news/list">list</a>
+				<a href="/SMBackEnd/news/list">list</a>
 		
 		<ul id="listHeader">
 			<li>number</li>
