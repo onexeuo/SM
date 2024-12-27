@@ -1,4 +1,4 @@
-package com.SM.news;
+package com.sm.news;
 
 import java.text.DateFormat;
 import java.util.Date;

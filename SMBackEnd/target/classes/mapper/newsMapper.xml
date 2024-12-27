@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sm.dao.NewsDao">
+
+	<resultMap id="NewsResultMap" type="com.sm.domain.NewsDTO">
+	    <id property="newsNum" column="newsnum"/>
+	    <result property="newsTitle" column="newstitle"/>
+	    <result property="newsContent" column="newscontent"/>
+	    <result property="newsDate" column="newsdate"/>
+	    <result property="newsImg" column="newsimg"/>
+	</resultMap>
+	
+	<select id="getListNews" resultMap="NewsResultMap">
+		SELECT * FROM NEWS
+		ORDER BY NEWSDATE DESC
+	</select>
+
+	<insert id="postNews" parameterType="NewsDTO">
+		INSERT INTO NEWS(NEWSNUM,NEWSTITLE,NEWSCONTENT,NEWSDATE,NEWSIMG)
+		VALUES(SEQ_NEWS.NEXTVAL,#{newsTitle},#{newsContent},CURRENT_TIMESTAMP,#{newsImg})
+	</insert>
+
+    <select id="detailNews" parameterType="int" resultMap="NewsResultMap">
+        SELECT * FROM NEWS WHERE NEWSNUM = #{newsNum}
+    </select>
+    
+ 	<update id="updateNews" parameterType="com.sm.domain.NewsDTO">
+	    UPDATE NEWS
+	    SET NEWSTITLE = #{newsTitle}, 
+	        NEWSCONTENT = #{newsContent}, 
+	        NEWSIMG = #{newsImg}
+	    WHERE NEWSNUM = #{newsNum}
+	</update>
+	
+    <select id="getUpdateNum" resultType="com.sm.domain.NewsDTO" parameterType="int">
+        SELECT * FROM NEWS WHERE NEWSNUM = #{newsNum}
+    </select>
+    
+    <delete id="deleteNews" parameterType="int">
+   		DELETE FROM NEWS
+    	WHERE NEWSNUM = #{newsNum}
+    </delete>
+    
+</mapper>

@@ -6,7 +6,7 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
 	<typeAliases>
-		<typeAlias type="com.SM.domain.NewsDTO" alias="NewsDTO"/>
+		<typeAlias type="com.sm.domain.NewsDTO" alias="NewsDTO"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/newsMapper.xml"/>
