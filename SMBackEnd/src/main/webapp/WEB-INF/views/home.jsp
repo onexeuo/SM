@@ -21,7 +21,7 @@
       <ul>
         <li><a href="#">HISTORY</a></li>
         <li><a href="#">ARTIST</a></li>
-        <li><a href="#">NEWS</a></li>
+        <li><a href="${pageContext.request.contextPath}/news/newsList">NEWS</a></li>
       </ul>
     </div>
     <header id="header">
@@ -41,7 +41,7 @@
             <li><a href="#" class="menu">MENU</a></li>
             <li><a href="#">HISTORY</a></li>
             <li><a href="#">ARTIST</a></li>
-            <li><a href="#">NEWS</a></li>
+            <li><a href="${pageContext.request.contextPath}/news/newsList">NEWS</a></li>
             <li><a href="#">*</a></li>
           </ul>
         </nav>
@@ -190,7 +190,32 @@
       <section id="news">
         <div>
           <h2>NEWS</h2>
-          <div id="newsContent">
+          <c:forEach items="${list}" var="news" varStatus="status">
+          	<c:if test="${status.index < 4}">
+	          	<div id="newsContent">
+	          		<div id="newsinnerContent">
+	          			<div class="newsImg">
+	          				<div class="lineLeft">
+	          					<div class="centerBox"></div>
+	          				</div>
+	          				<img src="${pageContext.request.contextPath}/${news.newsImg}" alt="${news.newsImg}"/>
+	          			</div>
+	          			<div id="newsText">
+			                <a href="#" target="_blank">
+			                  <div id="pinkbox"></div>
+			                  <div id="arrowBox">
+			                    <img class="arrow" src="${pageContext.request.contextPath}/static/img/arrowNavy.png" alt="화살표"/>
+			                  </div>
+			                  <p>${news.newsTitle}</p>
+			                  <p>${news.newsContent}</p>
+			                </a>
+		                </div>
+	          		</div>
+	          	</div>
+          	</c:if>
+          </c:forEach>
+          
+          <%-- <div id="newsContent">
             <div id="newsinnerContent">
               <div class="newsImg">
                 <div class="lineLeft">
@@ -275,7 +300,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> --%>
         </div>
       </section>
       <!-- main5 -->
