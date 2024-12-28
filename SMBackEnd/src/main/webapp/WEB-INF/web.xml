@@ -72,6 +72,7 @@
 
     <servlet-mapping>
         <servlet-name>default</servlet-name>
+        <url-pattern>/static/*</url-pattern>
         <url-pattern>/uploads/*</url-pattern>
     </servlet-mapping>
 

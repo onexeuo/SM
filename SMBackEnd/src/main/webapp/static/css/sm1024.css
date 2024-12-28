@@ -1,0 +1,368 @@
+@charset "utf-8";
+@media (max-width: 1540px) {
+#wrapper{
+  width:1024px;
+  width:100%;
+}
+section{
+  margin-bottom:170px;
+}
+
+/* main */
+main section > div{
+  width:916px;
+}
+/* intro */
+#intro #smlogoMotion{
+  margin-bottom:0px;
+  margin-left:100px;
+}
+
+/* visual */
+#visual{
+  width:916px;
+}
+#visual b{
+  font-size:90px;
+  line-height:110px;
+}
+#visual>div{
+  position: relative;
+}
+#visual>div b:nth-child(6),#visual>div b:nth-child(7),#visual>div b:nth-child(8){
+  display: none;
+}
+#visual>div b:nth-child(9){
+  margin-right: 0;
+}
+#visual>div b:nth-child(10),#visual>div b:nth-child(11){
+  display: inline-block;
+}
+#visual>div b:nth-child(10){
+  position: absolute;
+  right: 0;
+  top:100;
+}
+#visual>div b:nth-child(11){
+  margin-left:179px;
+}
+#visual .visualimg1{
+  width:302px;
+  height: 84px;
+}
+#visual .visualimg2{
+  width:500px;
+  height:84px;
+  background-position:center 22%;
+}
+#visual .visualimg3{
+  width:490px;
+  height:174px;
+  background-position:center 92%;
+  margin:10px 14px 0 0px;
+}
+
+/* artist */
+#artist{
+  width:100%;
+}
+#artist h2{
+  width:850px;
+}
+#artist .artistContent{
+  width:850px;
+}
+
+#artist .artistContent #artistSvg{
+  width:850px;
+  height:350px;
+}
+#artist .artistContent #artistText img{
+  margin-left:240px;
+}
+
+/* incompany */
+#incompany #incompanyContent #incompanyFirst .incompanySliderLogo{
+  margin-right:357px ;
+}
+#incompany #incompanyContent #incompanyFirst .incompanySliderImage{
+  width:280px;
+}
+#incompany #incompanyContent #incompanyTab{
+  width:635px;
+}
+#incompany #incompanyContent #incompanyTab li{
+  font-size: 23px;
+  padding: 24px 27px;
+  white-space: nowrap;
+}
+#incompany #incompanyContent .incompanySlider p{
+  width:635px;
+  padding:32px 80px;
+}
+/* news */
+#news{
+  width:1024px;
+  width:100%;
+}
+#news #newsContent{
+  flex-direction: column;
+}
+#news #newsContent #newsinnerContent{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+#news #newsContent .newsImg{
+  min-width:700px;
+  max-width:700px;
+  object-fit: cover;
+  margin:0;
+}
+#news #newsContent #newsText,#news #newsContent:nth-child(odd) #newsText{
+  width:916px;
+  min-width: 916px;
+  margin:80px auto 160px;
+}
+#news #newsContent:nth-child(odd) #newsinnerContent{
+  flex-direction:column;
+}
+#news #newsContent:nth-child(odd) .newsImg{
+  margin-left:auto;
+}
+#news #newsContent #newsText p:nth-child(3){
+  font-size:34px;
+  line-height: 50px;
+}
+#news #newsContent #arrowBox {
+  top:-2px;
+}
+#news  #newsContent #newsText #pinkbox{
+  height:30px;
+  top:76px;
+}
+
+
+
+/* summary */
+#summary>div #summaryWrapper{
+  width:916px;
+ }
+ #summary #summaryLeftDiv{
+  width:40%;
+  height:120px;
+  padding:20px 20px;
+  flex-direction: column;
+}
+#summary #summaryLeftDiv p:nth-child(2){
+  font-size:30px;
+  line-height: 28px;
+  white-space: nowrap;
+  margin-top:8px;
+}
+#summary #summaryCircle{
+  display: none;
+}
+#summary #summaryRight{
+  width:60%;
+  height: 120px;
+  margin-right:0px;
+  text-align: center;
+  padding: 10px 100px;
+}
+#summary #summaryRight b:nth-child(1){
+  width: 100%;
+  font-size: 64px;
+}
+#summary #summaryRight b:nth-child(2){
+  font-size: 24px;
+}
+#summary #summaryCircle2Box{
+  width:40%;
+}
+#summary #summaryCircle2{
+  width:120px;
+  height: 120px;
+}
+#summary #pinkBox{
+  width:58.7%;
+  height:119px;
+  bottom:119px;
+}
+
+/* footer */
+#footer{
+  height: 534px;
+}
+#footer #footerFirst{
+  justify-content: space-between; 
+}
+#footer #footerSecond{
+  height:260px;
+  flex-direction: column;
+}
+#footer #smLogo{
+  width:16.41%;
+  height: 30.71%;
+  flex-direction: column;
+  margin: 0;
+}
+#footer #smLogo img{
+  width:100px;
+}
+#footer #smLogo p{
+  font-size: 14px;
+}
+#footer #contact{
+  width:47.59%;
+  margin-right:0;
+  border-right:none;
+}
+#footer #SNSIcon,#footer #famlan{
+  width:33.6%;
+  margin-left: 19.1%;
+}
+#footer #SNSIcon{
+  border-bottom:none;
+}
+#footer #privacy{
+  width:47.59%;
+}
+
+
+
+/* line */
+/* incompany */
+#incompany .lineLeft::after{
+  width:360px;
+  top:320px;
+  left:281px;
+}
+#incompany .lineLeft::before{
+  width:280px;
+  left:150px;
+}
+#incompany .lineLeft .centerBox{
+  left:275px;
+}
+/* news */
+#news .lineLeft::after,#news .lineLeft::before{
+  width:200px;
+}
+#news .lineLeft::after{
+  top:500px;
+  left:698px;
+}
+#news .lineLeft::before{
+  top:464px;
+  left:640px;
+}
+#news .lineLeft .centerBox{
+  top:459px;
+  left:692px;
+}
+#news .lineLeft2::after{
+  top:530px;
+  left:-198px;
+  transform: translateX(50%) rotate(90deg);
+}
+#news .lineLeft2::before{
+  top:488px;
+  left:-140px;
+}
+#news .lineLeft2 .centerBox{
+  top:483px;
+  left:-4px;
+}
+#news .lineLeft3::after{
+  top: 1090px; 
+  left: 698px;  
+}
+#news .lineLeft3::before{
+  top: 1048px; 
+  left: 630px; 
+}
+#news .lineLeft3 .centerBox{
+  top:1043px;
+  left:692px;
+}
+#news .lineLeft4::after{
+  top:710px;
+  left:-198px;
+  transform: translateX(50%) rotate(90deg);
+}
+#news .lineLeft4::before{
+  top:698px;
+  left:-140px;
+}
+#news .lineLeft4 .centerBox{
+  top:693px;
+  left:-4px;
+}
+
+/* summary */
+#summary .lineLeft::after,#summary .lineLeft::before{
+  width:240px;
+}
+#summary .lineLeft::after{
+  top: 180px; 
+  left: 366px;  
+}
+#summary .lineLeft::before{
+  top:118px;
+  left: 306px; 
+}
+#summary .lineLeft .centerBox{
+  background-color: rgb(255, 255, 255);
+  left:360px;
+  top:113px;
+}
+#summary .lineLeft2::before{
+  top:236px;
+  left:306px;
+}
+#summary .lineLeft2 .centerBox{
+  background:#ffffff;
+  top:231px;
+}
+#summary .lineLeft3{
+  display: none;
+}
+/* footer */
+#footer .lineLeft .centerBox{
+  top:30.71%;
+  left:18.51%;
+}
+#footer .lineLeft .centerBox:nth-child(2){
+  left:51.9%;
+}
+#footer .lineLeft .centerBox:nth-child(3){
+  top:51.2%;
+  left:18.51%;
+}
+#footer .lineLeft .centerBox:nth-child(4){
+  top:51.2%;
+  left:51.9%;
+}
+#footer .lineLeft .centerBox:nth-child(5){
+  top:63.2%;
+  left:18.51%;
+}
+#footer .lineLeft .centerBox:nth-child(6){
+  top:63.2%;
+  left:51.9%;
+}
+#footer .lineLeft .centerBox:nth-child(7){
+  top:78%;
+  left:18.51%;
+}
+#footer .lineLeft .centerBox:nth-child(8){
+  top:78%;
+  left:51.9%;
+}
+#footer .lineLeft .centerBox:nth-child(9),#footer .lineLeft .centerBox:nth-child(10){
+  display: none;
+}
+
+
+}

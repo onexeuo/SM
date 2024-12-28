@@ -19,7 +19,19 @@ $(document).ready(function(){
     return `${year}.${month}.${day} ${hours}:${minutes}`;
   }
   
-
+  const scrollbtn =document.querySelector('.scrollUp');
+  
+  // scroll
+  window.addEventListener('scroll',function(){
+    if(window.scrollY > 1000){
+      scrollbtn.style.display = 'block';
+    }else{
+      scrollbtn.style.display = 'none';
+    }
+  })
+  scrollbtn.addEventListener('click',function(){
+    window.scrollTo(0,0);
+  })
 
   main4Fir.click(function(){
     main4Sec.css("background","none");
