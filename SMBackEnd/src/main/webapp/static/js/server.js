@@ -14,7 +14,6 @@ app.use(express.static('public'));
 
 const interval = 600000;
 
-
 async function getStockData(){
   try{
     const response = await axios.get(targetUrl);
@@ -55,14 +54,14 @@ setInterval(async () => {
 }, interval);
 
 // 주가
-// axios.get(targetUrl)
-//   .then(Response => {
-//     const $ = cheerio.load(Response.data);
-//     const price = $('.fxKbKc').text();
-//     console.log('price : ', price);
-//   }).catch(error => {
-//     console.log('error', error);
-//   })
+ axios.get(targetUrl)
+   .then(Response => {
+     const $ = cheerio.load(Response.data);
+     const price = $('.fxKbKc').text();
+     console.log('price : ', price);
+   }).catch(error => {
+     console.log('error', error);
+   })
 
 app.get('/get-price', async(req, res) => {
   try{

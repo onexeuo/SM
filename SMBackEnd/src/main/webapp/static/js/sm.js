@@ -100,7 +100,7 @@ $('#menuModal').on('click', function(){
 
 
 // 주가 가격 가져오기
-/*$.ajax({
+$.ajax({
   url:'http://127.0.0.1:3000/get-price',
   method:'GET',
   success:function(data){
@@ -126,7 +126,7 @@ $('#menuModal').on('click', function(){
       $('#summaryLeftDiv p:nth-child(2)').append('error')
       $('#summaryRight b').append('cant get price');
     }
-})*/
+})
 
 
 });
