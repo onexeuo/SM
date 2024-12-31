@@ -1,3 +1,35 @@
+function updateStock(){
+	// 주가 가격 가져오기
+	$.ajax({
+	  url:'http://127.0.0.1:3000/get-price',
+	  method:'GET',
+	  success:function(data){
+	    const stockPrice = data.finalPrice;
+	    const stockToday = data.finalToday;
+	    const currentTime = data.currentTime;
+		
+	    $('#summaryLeftDiv p:nth-child(2)').text(currentTime);
+	
+	    if (stockToday.startsWith('+')) {
+	      $('#summaryRight b:nth-child(2)').text(stockToday).css('color', 'red');
+	    } else if (stockToday.startsWith('-')) {
+	      $('#summaryRight b:nth-child(2)').text(stockToday).css('color', 'blue');
+	    } else {
+	      $('#summaryRight b:nth-child(2)').text(stockToday);
+	    }
+	
+	    $('#summaryRight b:nth-child(1)').text(`${stockPrice}`);
+	    // $('#summaryRight b:nth-child(2)').append(`${stockToday}`);
+	    console.log("stockPrice:" + `${stockPrice}`);
+	  },
+	    error:function(error){
+	      console.log(error,'cant get price');
+	      $('#summaryLeftDiv p:nth-child(2)').text('error')
+	      $('#summaryRight b').text('cant get price');
+	    }
+	})
+}
+
 $(document).ready(function(){
   const pink = "#FFB7CA";
   const navy = "#223055";
@@ -8,16 +40,7 @@ $(document).ready(function(){
   const main4P = $(".incompanySlider p");
   const main4Logo = $("#incompany #incompanyContent #incompanyFirst .incompanySliderLogo");
   const main4Img = $("#incompany #incompanyContent #incompanyFirst .incompanySliderImage");
-  // 날짜
-  function formatDate(date) {
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0'); 
-    const year = String(date.getFullYear()).slice(2); 
-    const hours = String(date.getHours()).padStart(2, '0');
-    const minutes = String(date.getMinutes()).padStart(2, '0');
-    
-    return `${year}.${month}.${day} ${hours}:${minutes}`;
-  }
+
 
   const scrollbtn =document.querySelector('.scrollUp');
   
@@ -99,34 +122,10 @@ $('#menuModal').on('click', function(){
 });
 
 
-// 주가 가격 가져오기
-$.ajax({
-  url:'http://127.0.0.1:3000/get-price',
-  method:'GET',
-  success:function(data){
-    const stockPrice = data.finalPrice;
-    const stockToday = data.finalToday;
-    //날짜
-    const currentTime = formatDate(new Date());
-    $('#summaryLeftDiv p:nth-child(2)').append(currentTime);
-
-    if (stockToday.startsWith('+')) {
-      $('#summaryRight b:nth-child(2)').text(stockToday).css('color', 'red');
-    } else if (stockToday.startsWith('-')) {
-      $('#summaryRight b:nth-child(2)').text(stockToday).css('color', 'blue');
-    } else {
-      $('#summaryRight b:nth-child(2)').text(stockToday);
-    }
-
-    $('#summaryRight b:nth-child(1)').append(`${stockPrice}`);
-    // $('#summaryRight b:nth-child(2)').append(`${stockToday}`);
-  },
-    error:function(error){
-      console.log(error,'cant get price');
-      $('#summaryLeftDiv p:nth-child(2)').append('error')
-      $('#summaryRight b').append('cant get price');
-    }
-})
+  updateStock(); 
+      
+  // 10분마다 주가 정보를 갱신합니다.
+  setInterval(updateStock, 600000); 
 
 
 });

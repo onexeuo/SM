@@ -9,6 +9,17 @@ const app = express();
 const cors = require('cors');
 const port = 3000;
 
+// 날짜
+  function formatDate(date) {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); 
+    const year = String(date.getFullYear()).slice(2); 
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    
+    return `${year}.${month}.${day} ${hours}:${minutes}`;
+  }
+
 app.use(cors());
 app.use(express.static('public'));
 
@@ -32,7 +43,7 @@ async function getStockData(){
     const page = await browser.newPage();
     await page.goto(targetUrl);
 
-    const today = await page.$eval('span.P2Luy.Ebnabc.ZYVHBb', el => el.textContent);
+    const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
     const replaceToday = today.replace(/[^\d,+-.]/g, '');
     const finalToday = replaceToday.replace(/(\.00)$/, '');
     console.log('today : ', today);
@@ -40,18 +51,21 @@ async function getStockData(){
     console.log('fianlToday : ',finalToday);
 
     await browser.close();
+    //날짜
+    const currentTime = formatDate(new Date());
+    console.log('currentTime:', currentTime);
 
-    return {finalToday, finalPrice};
+    return {finalToday, finalPrice, currentTime};
 
   }catch(error){
     console.log('Error',error);
     return {error : 'cant get stock data'};
   }
 }
-setInterval(async () => {
-  const stockData = await getStockData();
-  console.log('stock data', stockData);
-}, interval);
+//setInterval(async () => {
+//  const stockData = await getStockData();
+//  console.log('stock data', stockData);
+//}, interval);
 
 // 주가
  axios.get(targetUrl)
@@ -66,7 +80,7 @@ setInterval(async () => {
 app.get('/get-price', async(req, res) => {
   try{
     const stockData = await getStockData();
-
+  console.log('stock data', stockData);
     res.json(stockData);
   }catch(error){
     console.log('Error');

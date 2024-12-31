@@ -521,6 +521,7 @@ main section > div{
 /* summary */
 #summary{
   width:100%;
+  overflow:hidden;
 }
 #summary div{
   width:100%;
