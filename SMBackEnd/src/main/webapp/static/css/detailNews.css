@@ -1,0 +1,57 @@
+@charset "UTF-8";
+*{
+  color:#000;
+  margin:0 auto;
+  padding:0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+img{
+  width:100%;
+}
+
+body{
+  width:1920px;
+  width:100%;
+}
+#wrapper{
+	width:80%;
+	max-width:1500px;
+	margin:70px auto;
+}
+h2 > a:hover {
+  color: #FFB7CA;
+}
+span{
+	font-size:22px;
+}
+p{
+	display:inline-block;
+	font-size:20px;
+	border:2px solid #999;
+	padding:3px 10px;
+	border-radius:30px;
+  max-width: 1000px;  /* 최대 너비 설정 */
+  white-space: normal; /* 텍스트 줄 바꿈 허용 */
+  word-wrap: break-word; /* 너무 긴 단어가 넘어가면 줄 바꿈 */
+  overflow-wrap: break-word;
+}
+.update, .delete{
+	padding:10px 15px;
+	background:#dcdcdc;
+	font-size:20px;
+	border-radius:50px;
+	cursor:pointer;
+}
+.update:hover{
+	background:pink;
+	border:none;
+}
+.delete:hover{
+	background:red;
+	border:none;
+}
+
+

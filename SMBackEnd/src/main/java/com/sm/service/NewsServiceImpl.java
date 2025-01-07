@@ -27,8 +27,8 @@ public class NewsServiceImpl implements NewsService {
 		List<NewsDTO> newsList = newsDao.getListNews();
 		
 		for(NewsDTO newsDto : newsList) {
-			if(newsDto.getNewsDate() != null) {
-				String formattedDate = newsDto.getNewsDate().format(formatter);
+			if(newsDto.getCreateDate() != null) {
+				String formattedDate = newsDto.getCreateDate().format(formatter);
 				newsDto.setFormattedDate(formattedDate);
 			}
 		}
@@ -44,8 +44,8 @@ public class NewsServiceImpl implements NewsService {
 	@Override
 	public NewsDTO detailNews(int newsNum) {
 		NewsDTO newsDto = newsDao.detailNews(newsNum);
-		if(newsDto.getNewsDate() != null) {
-			String formattedDate = newsDto.getNewsDate().format(formatter);
+		if(newsDto.getCreateDate() != null) {
+			String formattedDate = newsDto.getCreateDate().format(formatter);
 			newsDto.setFormattedDate(formattedDate);
 		}
 		
@@ -54,6 +54,7 @@ public class NewsServiceImpl implements NewsService {
 
 	@Override
 	public int updateNews(NewsDTO newsDto) {
+
 		return newsDao.updateNews(newsDto);
 	}
 

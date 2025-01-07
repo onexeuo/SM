@@ -1,0 +1,109 @@
+@charset "UTF-8";
+* {
+  color: #000;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  width: 1920px;
+  width: 100%;
+}
+
+#wrapper {
+  width: 80%;
+  max-width: 1500px;
+  margin: 70px auto;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+h2 > a:hover {
+  color: #FFB7CA;
+}
+
+.insert {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 24px;
+  border-radius: 50px;
+  transition: 0.2s ease-in-out;
+}
+
+.insert:hover {
+  background: #dcdcdc;
+}
+
+#table {
+  border: 2px solid #999;
+  table-layout: fixed;  /* 테이블 레이아웃 고정 */
+  width: 100%;
+}
+
+#table thead,
+#table tbody {
+  width: 100%;
+  height: 50px;
+}
+
+#table thead {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#table thead tr th:nth-child(1),
+#table tbody tr td:nth-child(1) {
+  width: 10%;
+}
+
+#table thead tr th:nth-child(2),
+#table tbody tr td:nth-child(2) {
+  width: 20%;
+  max-width: 250px;   /* 최대 너비 제한 */
+  white-space: nowrap; /* 텍스트 한 줄로 유지 */
+  overflow: hidden;    /* 넘치는 텍스트 숨기기 */
+  text-overflow: ellipsis; /* 넘치는 텍스트는 '...' 표시 */
+}
+
+#table thead tr th:nth-child(3),
+#table tbody tr td:nth-child(3) {
+  width: 40%;
+  max-width: 500px;  /* 최대 너비 제한 */
+  white-space: nowrap; /* 텍스트 한 줄로 유지 */
+  overflow: hidden;    /* 넘치는 텍스트 숨기기 */
+  text-overflow: ellipsis; /* 넘치는 텍스트는 '...' 표시 */
+}
+
+#table thead tr th:nth-child(4),
+#table tbody tr td:nth-child(4) {
+  width: 20%;
+}
+
+#table tbody tr {
+  height: 50px;
+  cursor: pointer;
+}
+
+#table tbody tr:hover {
+  background: #dcdcdc;
+}
+
+#table > tbody > tr:nth-child(1) > td:nth-child(5) {
+  width: 20%;
+}
+
+#table tbody td,
+#table tbody th {
+  white-space: nowrap; /* 텍스트 한 줄로 유지 */
+  overflow: hidden;    /* 넘치는 텍스트 숨기기 */
+  text-overflow: ellipsis; /* 넘치는 텍스트는 '...' 표시 */
+}

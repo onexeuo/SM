@@ -5,10 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>updateNews</title>
+      <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/insertNews.css"/>
 </head>
 <body>
-	<h1>update news</h1>
-	    <h2><a href="${pageContext.request.contextPath}/news/newsList">go newsList</a></h2>
+<div id="wrapper">
+	<h1>📤 update news</h1>
+	    <h2><a href="${pageContext.request.contextPath}/news/newsList">← newsList</a></h2>
 	
 	<form action="${pageContext.request.contextPath}/news/updateNews/${newsDto.newsNum}" method="post"  enctype="multipart/form-data">
         <input type="hidden" name="newsNum" value="${newsDto.newsNum}" />
@@ -22,7 +24,7 @@
         <br/>
         
                 <!-- 이미지 파일 입력 -->
-        <p><img src="${newsDto.newsImg}" alt="${news.newsImg}" width="100" height="100" />${newsDto.newsImg}</p>
+        <p><img src="${pageContext.request.contextPath}/${newsDto.newsImg}" alt="${news.newsImg}"/>${newsDto.newsImg}</p>
         <label for="newsImg">이미지 upload:</label>
         <input type="file" name="file" id="newsImg" />
         
@@ -30,5 +32,6 @@
         
         <button type="submit">수정</button>
 	</form>
+	</div>
 </body>
 </html>

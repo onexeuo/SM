@@ -1,25 +1,28 @@
 package com.sm.domain;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class NewsDTO {
 	public int newsNum;
 	public String newsTitle;
 	public String newsContent;
-	public LocalDateTime newsDate;
+	public LocalDateTime createDate;
+	public Date updateDate;
 	public String formattedDate;
 	public String newsImg;
 	
 	public NewsDTO() {
 	}
 
-	public NewsDTO(int newsNum, String newsTitle, String newsContent, LocalDateTime newsDate, String formattedDate,
-			String newsImg) {
+	public NewsDTO(int newsNum, String newsTitle, String newsContent, LocalDateTime createDate, Date updateDate,
+			String formattedDate, String newsImg) {
 		super();
 		this.newsNum = newsNum;
 		this.newsTitle = newsTitle;
 		this.newsContent = newsContent;
-		this.newsDate = newsDate;
+		this.createDate = createDate;
+		this.updateDate = updateDate;
 		this.formattedDate = formattedDate;
 		this.newsImg = newsImg;
 	}
@@ -48,12 +51,20 @@ public class NewsDTO {
 		this.newsContent = newsContent;
 	}
 
-	public LocalDateTime getNewsDate() {
-		return newsDate;
+	public LocalDateTime getCreateDate() {
+		return createDate;
 	}
 
-	public void setNewsDate(LocalDateTime newsDate) {
-		this.newsDate = newsDate;
+	public void setCreateDate(LocalDateTime createDate) {
+		this.createDate = createDate;
+	}
+
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
 	}
 
 	public String getFormattedDate() {
@@ -75,10 +86,11 @@ public class NewsDTO {
 	@Override
 	public String toString() {
 		return "NewsDTO [newsNum=" + newsNum + ", newsTitle=" + newsTitle + ", newsContent=" + newsContent
-				+ ", newsDate=" + newsDate + ", formattedDate=" + formattedDate + ", newsImg=" + newsImg + "]";
+				+ ", createDate=" + createDate + ", updateDate=" + updateDate + ", formattedDate=" + formattedDate
+				+ ", newsImg=" + newsImg + "]";
 	}
 
-	
+
 	
 
 

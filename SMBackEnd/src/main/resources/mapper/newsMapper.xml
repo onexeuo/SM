@@ -6,17 +6,18 @@
 	    <id property="newsNum" column="newsnum"/>
 	    <result property="newsTitle" column="newstitle"/>
 	    <result property="newsContent" column="newscontent"/>
-	    <result property="newsDate" column="newsdate"/>
+	    <result property="createDate" column="createdate"/>
 	    <result property="newsImg" column="newsimg"/>
+	    <result property="updateDate" column="updatedate"/>
 	</resultMap>
 	
 	<select id="getListNews" resultMap="NewsResultMap">
 		SELECT * FROM NEWS
-		ORDER BY NEWSDATE DESC
+		ORDER BY CREATEDATE DESC
 	</select>
 
 	<insert id="postNews" parameterType="NewsDTO">
-		INSERT INTO NEWS(NEWSNUM,NEWSTITLE,NEWSCONTENT,NEWSDATE,NEWSIMG)
+		INSERT INTO NEWS(NEWSNUM,NEWSTITLE,NEWSCONTENT,CREATEDATE,NEWSIMG)
 		VALUES(SEQ_NEWS.NEXTVAL,#{newsTitle},#{newsContent},CURRENT_TIMESTAMP,#{newsImg})
 	</insert>
 
@@ -28,7 +29,8 @@
 	    UPDATE NEWS
 	    SET NEWSTITLE = #{newsTitle}, 
 	        NEWSCONTENT = #{newsContent}, 
-	        NEWSIMG = #{newsImg}
+	        NEWSIMG = #{newsImg},
+	        UPDATEDATE = CURRENT_TIMESTAMP
 	    WHERE NEWSNUM = #{newsNum}
 	</update>
 	

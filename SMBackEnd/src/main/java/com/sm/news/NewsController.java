@@ -51,7 +51,7 @@ public class NewsController {
 	            String fileName = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
 	            
 	            // 실제 저장 경로 (절대 경로 사용)
-	            String uploadDir = request.getSession().getServletContext().getRealPath("/uploads/"); // 서버 내 /uploads/ 폴더
+	            String uploadDir = request.getSession().getServletContext().getRealPath("/uploads"); // 서버 내 /uploads/ 폴더
 	            File uploadFile = new File(uploadDir, fileName);
 
 	            // 업로드 디렉토리가 없다면 생성
@@ -100,7 +100,7 @@ public class NewsController {
 	            String fileName = existingNews.getNewsImg().substring(existingNews.getNewsImg().lastIndexOf("/") + 1);
 	            File existingFile = new File(uploadDir, fileName);
 	            if (existingFile.exists()) {
-	                existingFile.delete();  // 기존 파일 삭제
+	                existingFile.delete();  
 	            }
 	        }
 

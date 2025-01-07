@@ -43,7 +43,7 @@ async function getStockData(){
     const page = await browser.newPage();
     await page.goto(targetUrl);
 
-    const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
+    const today = await page.$eval('span.P2Luy.Ebnabc.ZYVHBb', el => el.textContent);
     const replaceToday = today.replace(/[^\d,+-.]/g, '');
     const finalToday = replaceToday.replace(/(\.00)$/, '');
     console.log('today : ', today);
