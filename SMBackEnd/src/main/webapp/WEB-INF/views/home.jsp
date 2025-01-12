@@ -195,10 +195,10 @@
 	          	<div id="newsContent">
 	          		<div id="newsinnerContent">
 	          			<div class="newsImg">
-	          				<div class="lineLeft">
+	          				<div class="lineLeft lineLeft${status.index + 1}">
 	          					<div class="centerBox"></div>
 	          				</div>
-	          				<img src="${pageContext.request.contextPath}/${news.newsImg}" alt="${news.newsImg}"/>
+	          				<img class="newsImg${status.index + 1}" src="${pageContext.request.contextPath}/${news.newsImg}" alt="${news.newsImg}"/>
 	          			</div>
 	          			<div id="newsText">
 			                <a href="#" target="_blank">

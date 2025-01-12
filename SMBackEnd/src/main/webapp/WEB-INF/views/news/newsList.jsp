@@ -12,7 +12,7 @@
 <body>
 <div id="wrapper">
 	<h1>📑 news list</h1>
-	<h2><a href="/SMBackEnd">← Home</a></h2>
+	<h2><a href="/SM">← Home</a></h2>
 	<a class="insert"  href="${pageContext.request.contextPath}/news/insertNews"> + insert News</a><br/><br/>	
 	<table id="table" border="1">
         <thead>

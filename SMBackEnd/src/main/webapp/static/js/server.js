@@ -23,7 +23,7 @@ const port = 3000;
 app.use(cors());
 app.use(express.static('public'));
 
-const interval = 600000;
+
 
 async function getStockData(){
   try{
@@ -43,7 +43,7 @@ async function getStockData(){
     const page = await browser.newPage();
     await page.goto(targetUrl);
 
-    const today = await page.$eval('span.P2Luy.Ebnabc.ZYVHBb', el => el.textContent);
+    const today = await page.$eval('span.P2Luy.Ez2Ioe.ZYVHBb', el => el.textContent);
     const replaceToday = today.replace(/[^\d,+-.]/g, '');
     const finalToday = replaceToday.replace(/(\.00)$/, '');
     console.log('today : ', today);
@@ -62,6 +62,7 @@ async function getStockData(){
     return {error : 'cant get stock data'};
   }
 }
+//const interval = 600000;
 //setInterval(async () => {
 //  const stockData = await getStockData();
 //  console.log('stock data', stockData);

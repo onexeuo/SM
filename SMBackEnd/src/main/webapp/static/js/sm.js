@@ -113,13 +113,54 @@ var contextPath = document.body.getAttribute('data-context-path');
     // 초기화
     updateSlider();
 
-// menumodal
-$('.menu').on('click', function(){
-  $('#menuModal').show();
-})
-$('#menuModal').on('click', function(){
-  $('#menuModal').hide();
-});
+	// menumodal
+	$('.menu').on('click', function(){
+	  $('#menuModal').show();
+	})
+	$('#menuModal').on('click', function(){
+	  $('#menuModal').hide();
+	});
+	
+	// 뉴스 이미지 라인 설정
+	for(let i=1; i<5; i++){
+		const lineLeft = document.querySelector('.lineLeft'+i);
+		//console.log(lineLeft);
+		
+		var lineLeftImg = document.querySelector('.newsImg'+i);
+		//console.log(lineLeftImg);
+		
+		if(lineLeft && lineLeftImg){
+			var lineLeftWidth = lineLeftImg.width;
+			var lineLeftHeight = lineLeftImg.height;
+			console.log( lineLeftWidth -1, lineLeftHeight);
+			console.log(i, i%2 !==0, i%2 ==0);
+			
+			if(i % 2 !== 0){
+				lineLeft.style.setProperty('--after-top', `${lineLeftHeight-1}px`);
+				lineLeft.style.setProperty('--after-left', `${lineLeftWidth-1}px`);
+				lineLeft.style.setProperty('--before-top', `${lineLeftHeight-2}px`);
+				lineLeft.style.setProperty('--before-left', `${lineLeftWidth-65}px`);
+				lineLeft.style.setProperty('--centerBox-top', `${lineLeftHeight-6}px`);
+				lineLeft.style.setProperty('--centerBox-left', `${lineLeftWidth-6}px`);		
+			}else{
+				console.log('짝수 실행 : ')
+				lineLeft.style.setProperty('--after-top', `${lineLeftHeight+60}px`,'important');
+				lineLeft.style.setProperty('--after-left', `${lineLeftWidth-1148}px`,'important');
+				lineLeft.style.setProperty('--before-top', `${lineLeftHeight-2}px`,'important');
+				lineLeft.style.setProperty('--before-left', `${lineLeftWidth-1305}px`,'important');
+				lineLeft.style.setProperty('--centerBox-top', `${lineLeftHeight-6}px`,'important');
+				lineLeft.style.setProperty('--centerBox-left', `${lineLeftWidth-906}px`,'important');
+				console.log('after-top:', lineLeft.style.getPropertyValue('--after-top','important'));
+console.log('after-left:', lineLeft.style.getPropertyValue('--after-left'));
+console.log('before-top:', lineLeft.style.getPropertyValue('--before-top'));
+console.log('before-left:', lineLeft.style.getPropertyValue('--before-left'));
+			}
+			
+		}else{
+			console.log('no elements ')
+		}
+	}
+	
 
 
   updateStock(); 
