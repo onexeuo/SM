@@ -4,8 +4,10 @@
 <br /><br />
 <img src="https://github.com/user-attachments/assets/45bcb898-a794-4cc8-b729-1a8fb653ceed" width="400"/>
 <br /><br />
-## 1. header, menu, visual 
+
+## 1. header, menu, visual
 <br /><br />
+  <img src="https://github.com/user-attachments/assets/8f24838e-fa69-4a4c-adcd-92eb1aa9eb87"/>
   <img src="https://github.com/user-attachments/assets/94b26ebf-1c05-4562-bf65-e0ee91431690"/>
 <br /><br />
 ① 대표 로고 (클릭 시 메인 페이지로 이동)<br />
@@ -87,10 +89,39 @@
       좀 더 수정을해야한다.
       
 
+## 8. 스프링, DB
 
+뉴스 부분에 기사를 업로드하고 url처리
+##### 1. db에 저장되어있는 목록 가져오기
+<img src="https://github.com/user-attachments/assets/5a3fe025-00b0-4160-8f08-2554cb8a06cf" />
+<img src="https://github.com/user-attachments/assets/007e139e-a528-4a36-a4ad-8b3951204522" />
+<br /><br />
+① home 이동 (클릭 시 메인 페이지로 이동)<br />
+② 뉴스 작성 (클릭 시 뉴스 작성 페이지로 이동)<br />
+③ 뉴스 목록 (뉴스 목록 최근 추가 된 순서로 나열, 클릭시 상세페이지로 이동)<br /><br />
 
+##### 2. 뉴스 추가하기
+<img src="https://github.com/user-attachments/assets/3da5347e-4613-46e3-a66f-a6e3409429a3" />
+<img src="https://github.com/user-attachments/assets/edf47995-e870-4312-9276-809af0315d33" />
+<br /><br />
+① 뉴스 목록으로 이동 <br />
+② 뉴스 작성 (제목, 내용 입력 안했을 시 경고문구)<br />
+③ 사진 파일 업로드(파일업로드 시 서버에 폴더를 만들어 저장)<br /><br />
 
+##### 3. 뉴스 상세보기
+  <br />
+<img src="https://github.com/user-attachments/assets/8008f726-df3a-4a2a-aba5-5507285929fa" />
+<img src="https://github.com/user-attachments/assets/a118ab6d-f82b-47db-abb1-3c8af8f6d8fe" />
+<img width="300" src="https://github.com/user-attachments/assets/2bd082af-b4bf-41a7-b0ef-209813c3838b" />
+<br /><br />
+① 업데이트, 삭제버튼 (업데이트 클릭 시 수정페이지로 이동, 삭제 클릭 시 삭제 경고 문구가 나온 후 삭제)<br /><br />
 
+##### 4. 뉴스 수정
+
+<img src="https://github.com/user-attachments/assets/a416a1f4-131b-4ca1-b898-7594c50f207b" />
+<img src="https://github.com/user-attachments/assets/11b133a4-8cd7-405f-8569-b5636078b6d2" />
+<br /><br />
+① 변경하고 싶은 내용으로 변경하고 등록 <br /><br />
 
 
     
